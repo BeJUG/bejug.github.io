@@ -1,0 +1,14 @@
+# Build files
+/target
+# Local files
+/local
+
+# IntelliJ and eclipse files
+/.*
+!.gitignore
+!.gitattributes
+!.github
+/*.iml
+
+# Repository wide ignore mac DS_Store files
+.DS_Store

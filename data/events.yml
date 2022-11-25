@@ -1,0 +1,20 @@
+# To add an event in the GitHub user interface, click on the Edit button at the top right which will submit a pull request.
+#
+# Available properties per event
+#  eventId: Should be in format "yyyymmdd-suffix". The yyyymmdd is the date
+#  meetupUrl: (optional) Link the event organization itself.
+#  location: Should be in format "city"
+#  date: Must be in format "yyyy-mm-dd". If multiple days cover our project, only note the first day
+#  talks: (optional) If the CFP is not yet accepted, do not include it yet.
+#    - title: Session title (without the conference or organizer name).
+#      presenters: (optional) Comma separated list of presenters.
+#
+# Order events by date descending
+
+- eventId: 20221124-brussels
+  meetupUrl: https://www.meetup.com/belgian-java-user-group/events/289451067/
+  location: Brussels
+  date: 2022-11-24
+  talks:
+    - title: "How Java 19 influences the future of your high-scale Java Applications"
+      presenters: Ana-Maria Mihalceanu

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jboss</groupId>
+    <artifactId>jboss-parent</artifactId>
+    <version>39</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>org.bejug</groupId>
+  <artifactId>bejug-website</artifactId>
+  <packaging>pom</packaging>
+  <version>999-SNAPSHOT</version>
+
+  <name>BeJUG website</name>
+  <description>
+    The JBake website for BeJUG.
+  </description>
+  <url>https://belgian-jug.github.io </url>
+  <inceptionYear>2022</inceptionYear>
+
+  <properties>
+    <version.org.jbake>2.7.0-rc.6</version.org.jbake>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jbake</groupId>
+        <artifactId>jbake-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <inputDirectory>${project.basedir}</inputDirectory>
+          <outputDirectory>${project.build.directory}/website</outputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.jbake</groupId>
+          <artifactId>jbake-maven-plugin</artifactId>
+          <version>${version.org.jbake}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

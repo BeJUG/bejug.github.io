@@ -1,0 +1,4 @@
+= The requested page does not exist
+:jbake-type: 404Base
+:jbake-description: The requested page does not exist
+:jbake-priority: 0.0
