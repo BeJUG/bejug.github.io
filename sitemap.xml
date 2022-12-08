@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://belgian-jug.github.io/partnership-guidelines.html</loc>
-        <lastmod>2022-11-25</lastmod>
+        <loc>https://bejug.github.io/partnership-guidelines.html</loc>
+        <lastmod>2022-12-08</lastmod>
         <priority>1.0</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
-        <loc>https://belgian-jug.github.io/events-archive.html</loc>
-        <lastmod>2022-11-25</lastmod>
+        <loc>https://bejug.github.io/events-archive.html</loc>
+        <lastmod>2022-12-08</lastmod>
         <priority>0.2</priority>
         <changefreq>monthly</changefreq>
     </url>
