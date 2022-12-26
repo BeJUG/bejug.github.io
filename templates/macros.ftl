@@ -11,9 +11,14 @@
                     <#if .now?date <= event.date?date>
                         <li class="mb-2">
                             <div class="title">
-                                <a href="${event.meetupUrl}">${event.location} - ${event.date?string("EEE d MMMM yyyy")}</a>
+                                <#if event.eventUrl??>
+                                    <a href="${event.eventUrl}">${event.eventName}</a>
+                                <#else>
+                                    ${event.eventName}
+                                </#if>
                             </div>
                             <span>
+                                ${event.location} - ${event.date?string("EEE d MMMM yyyy")}
                                 <#if event.talks??>
                                     <ul class="list-unstyled">
                                         <#list event.talks as talk>
