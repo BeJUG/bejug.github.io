@@ -26,8 +26,11 @@
 
 - eventId: 20230123-bejug
   eventName: "BeJUG January"
-  location: TBD
+  location: Mechelen
   date: 2023-01-23
+  talks:
+   - title: "Quarkus 101: Intro To Java Development With Quarkus"
+     presenters: Kevin Dubois
 
 - eventId: 20221124-bejug
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/289451067/
