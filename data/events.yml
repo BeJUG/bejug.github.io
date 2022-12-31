@@ -2,17 +2,36 @@
 #
 # Available properties per event
 #  eventId: Should be in format "yyyymmdd-suffix". The yyyymmdd is the date
-#  meetupUrl: (optional) Link the event organization itself.
+#  eventUrl: (optional) Link the event organization itself.
+#  eventName: Name of the event
 #  location: Should be in format "city"
 #  date: Must be in format "yyyy-mm-dd". If multiple days cover our project, only note the first day
-#  talks: (optional) If the CFP is not yet accepted, do not include it yet.
-#    - title: Session title (without the conference or organizer name).
+#  talks: (optional)
+#    - title: Session title (without the event name).
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
 
-- eventId: 20221124-brussels
-  meetupUrl: https://www.meetup.com/belgian-java-user-group/events/289451067/
+- eventId: 20231002-devoxx
+  eventUrl: https://devoxx.be/
+  eventName: "Devoxx 2023"
+  location: Antwerp
+  date: 2023-10-02
+
+- eventId: 20230205-fosdem
+  eventUrl: https://fosdem.org/2023/schedule/track/friends_of_openjdk/
+  eventName: "Fosdem 2023"
+  location: Brussels
+  date: 2023-02-05
+
+- eventId: 20230123-bejug
+  eventName: "BeJUG January"
+  location: TBD
+  date: 2023-01-23
+
+- eventId: 20221124-bejug
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/289451067/
+  eventName: "BeJUG November"
   location: Brussels
   date: 2022-11-24
   talks:
