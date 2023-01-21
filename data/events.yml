@@ -18,6 +18,21 @@
   location: Antwerp
   date: 2023-10-02
 
+- eventId: 20230523-voxxed-brussels
+  eventUrl: https://brussels.voxxeddays.com/
+  eventName: "Voxxed Days Brussels 2023"
+  location: Brussels
+  date: 2023-05-23
+
+- eventId: 20230330-bejug
+  eventName: "BeJUG March"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/290693260/
+  location: Kortrijk
+  date: 2023-03-30
+  talks:
+    - title: "What the CRaC - Superfast JVM startup"
+      presenters: Gerrit Grunwald
+
 - eventId: 20230205-fosdem
   eventUrl: https://fosdem.org/2023/schedule/track/friends_of_openjdk/
   eventName: "Fosdem 2023"
@@ -26,6 +41,7 @@
 
 - eventId: 20230123-bejug
   eventName: "BeJUG January"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/290631492/
   location: Mechelen
   date: 2023-01-23
   talks:
