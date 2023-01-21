@@ -6,7 +6,7 @@
 
 The BeJUG is always looking for more partners that want to host one of our meetups.
 This document describes what we are looking for.
-We would love it if you drop us a message here on meetup if you are interested in hosting.
+We would love it if you drop us a message, either as a direct message https://www.meetup.com/belgian-java-user-group/[on Meetup.com] or though mail via <belgian (dot) jug (a) gmail (dot) com> if you are interested in hosting.
 
 == What is the (BeJUG) ?
 
@@ -34,7 +34,7 @@ Additional aspects such as reachability, accessibility and are a plus.
 
 == What's in it for you as a host?
 
-- We bring speakers to your company, which provides your employees to learn from others outside "your bubble";
+- We bring speakers to your company, which gives your employees the opportunity to learn from others outside "your bubble";
 - Members of our meetup will visit the location you provide, which associates your company with being an active member of the Java Community;
 - A big thank you during the introduction and ending of the event;
 - When announcing the event, your company name will be included in the announcement (with social links @PARTNER_NAME)
