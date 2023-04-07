@@ -37,7 +37,9 @@ Additional aspects such as reachability, accessibility and are a plus.
 - We bring speakers to your company, which gives your employees the opportunity to learn from others outside "your bubble";
 - Members of our meetup will visit the location you provide, which associates your company with being an active member of the Java Community;
 - A big thank you during the introduction and ending of the event;
-- When announcing the event, your company name will be included in the announcement (with social links @PARTNER_NAME)
+- When announcing the event, your company name will be included in the announcement (with social links @PARTNER_NAME);
+
+A member of the BeJUG will make sure the introduction and ending of the evening includes a mention of your company name.
 
 == What does JUG Belgium do?
 

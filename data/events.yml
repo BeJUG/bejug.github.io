@@ -24,6 +24,24 @@
   location: Brussels
   date: 2023-05-23
 
+- eventId: 20230427-bejug
+  eventName: "BeJUG Speaker Training April"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/292729580/
+  location: Brussel
+  date: 2023-04-27
+  talks:
+    - title: "Speaker Training"
+      presenters: Tom Cools & Olivier Hubaut
+
+- eventId: 20230418-bejug
+  eventName: "BeJUG April"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/292156325/
+  location: Leuven
+  date: 2023-04-18
+  talks:
+    - title: "The next generation of Spring applications is here!"
+      presenters: Stéphane Nicoll
+
 - eventId: 20230330-bejug
   eventName: "BeJUG March"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/290693260/
