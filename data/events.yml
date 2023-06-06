@@ -17,6 +17,17 @@
   eventName: "Devoxx 2023"
   location: Antwerp
   date: 2023-10-02
+  
+- eventId: 20230622-bejug
+  eventName: "Hybrid Cloud Applications and Cloud-Native Dev Tools"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/293805252/
+  location: Brussel
+  date: 2023-06-22
+  talks:
+    - title: "Hybrid Cloud Applications Built with Pure Openness"
+      presenters: Emily Jiang
+    - title: "Cloud-Native Dev Tools: Bringing the cloud back to earth"
+      presenters: Grace Jansen
 
 - eventId: 20230523-voxxed-brussels
   eventUrl: https://brussels.voxxeddays.com/
