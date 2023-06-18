@@ -9,8 +9,8 @@
     description="Join the Belgium Java User Group"
     uri="">
         <div class="text-center">
-            <div class="m-4">
-                <img src="${content.rootpath}logo.png" alt="Logo">
+            <div>
+                <img src="${content.rootpath}logo.png" alt="Logo" width="30%">
             </div>
             <h1>The Belgian Java User Group</h1>
             <@macros.latestEvents/>
