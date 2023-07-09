@@ -3,13 +3,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://bejug.github.io/partnership-guidelines.html</loc>
-        <lastmod>2023-06-18</lastmod>
+        <lastmod>2023-07-09</lastmod>
         <priority>1.0</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://bejug.github.io/events-archive.html</loc>
-        <lastmod>2023-06-18</lastmod>
+        <lastmod>2023-07-09</lastmod>
         <priority>0.2</priority>
         <changefreq>monthly</changefreq>
     </url>
