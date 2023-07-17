@@ -17,6 +17,15 @@
   eventName: "Devoxx 2023"
   location: Antwerp
   date: 2023-10-02
+
+- eventId: 20230707-bejug
+  eventName: "Growing Beyond Senior"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/294251222/
+  location: Gembloux
+  date: 2023-07-07
+  talks:
+    - title: "Growing Beyond Senior"
+      presenters: Bruno Souza
   
 - eventId: 20230622-bejug
   eventName: "Hybrid Cloud Applications and Cloud-Native Dev Tools"
