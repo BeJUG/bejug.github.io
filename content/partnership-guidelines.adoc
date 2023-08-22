@@ -26,7 +26,7 @@ We are looking for partners to provide us a location. Typically, these are compa
 A partner should be able to provide:
 
 - (Required) A place for our speakers to present their session (beamer/screen, HDMI connection, internet)
-- (Required) Enough room for our meetup members to gather
+- (Required) Enough room for our meetup members to gather (min 50, preferably more)
 - (Optional) Drinks
 - (Optional) Food
 
@@ -43,10 +43,11 @@ We believe the above provides a lot of value to you as a host.
 
 == What does Belgium JUG do?
 
-We:
+We act as organizers. We:
 
-- Search and invite the speakers: these are occasionally top speakers you could find at conferences like Devoxx!
-- Setup the invite mailing and registration form: we use Meetup.com for this.
+- Search and invite the speakers and create a program for the event: these are occasionally top speakers you could find at conferences but we do give plenty of opportunities to lesser known speakers! The exact speakers which speak at an event are at our discretion and can be changed when needed;
+- Setup the invite mailing and registration form: we use Meetup.com for this;
+- Promote the event on our social media channels.
 
 == What are some other aspects a prospective partner should know about?
 
@@ -54,3 +55,4 @@ We:
 - All attendees must register through the Meetup group. This helps us to expand the group and gives structure to the signup process;
 - As a default, we do not allow employees of the hosting company to present a full session that same evening. Exceptions may be made due to planning constraints;
 - For historical reasons and to not give a company any preferential treatment, we do not leave room for the hosting company to introduce themselves or present any sort of "promo" talk for the company;
+- After the event is announced on the official BeJUG channels, the host will receive a set of links (1 for each platform) so they can retweet/repost/share among their own network. 
