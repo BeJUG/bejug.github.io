@@ -60,6 +60,7 @@ According to some the most beautiful coast line of the world, while others hate 
 
 === Antwerp
 
+* https://www.axxes.be/nl/[Axxes Café/Restaurant Kinepolis]: Mexican and other food.
 * https://takumiramennoodles.com/be/[Takumi]: Japanese noodles and Rice/Curry, multiple locations in the city.
 * https://www.littleseoul.be/en[Little Seoul]: Korean BBQ, more on the pricy side, city center.
 * http://www.baiweichineserestaurant.be/[Bai Wei]: Chinese noodles, chinatown district. The outside looks shabby, inside is ok, food = great.
@@ -71,3 +72,7 @@ According to some the most beautiful coast line of the world, while others hate 
 === Brussels
 
 * https://www.visit.brussels/en/visitors/where-to-eat/tram-experience[Tram Experience]: lets you be carried away on a surprising culinary journey in a unique and original atmosphere! Six renowned chefs invite you to discover their gastronomic universes of varied flavors and horizons. Seats are limited...
+
+=== Other Locations
+
+* https://www.biercentral.be/eng/[Bier Central]: _Enjoy Belgian classics in the mecca for true beer lovers in Ghent, Antwerp, Brussels and Mechelen_.
