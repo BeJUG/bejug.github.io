@@ -4,7 +4,11 @@
 :jbake-priority: 1.0
 :showtitle:
 
+// Styling: please use italic when using quotes or text from the website of the place you are describing.
+
 During a call with BeJUG members, we collected a list of exciting places to share with the Java community. We know a JUG or conference schedule allows you to fill your days with a lot of Java, but for those of you coming early, staying longer or just looking for a good local restaurant we got you covered.
+
+NOTE: BeJUG did not get any kind of sponsorship nor deal from any of the places listed here. They are tips collected from the community.
 
 == To See or Visit
 
@@ -44,20 +48,20 @@ _In 1576, Plantin relocated his printing works to the Vrijdagmarkt. His family l
 
 ==== Comics Art Museum
 
-_Belgium is famous for its beers and french fries, but missing out on the  influence it had worldwide on the comics art. So it you love the ninth art, don't hesitate to book a tour at https://www.comicscenter.net/en/home[the museum]._
+Belgium is famous for its beers and french fries, but missing out on the  influence it had worldwide on the comics art. So if you love the ninth art, don't hesitate to book a tour at https://www.comicscenter.net/en/home[the museum].
 
 ==== Magritte Museum
 
-_Belgium was the home of lot of famous painters, but if you like surrealism, of just appreciate nice and relaxing painting, the https://musee-magritte-museum.be/en[Magritte Museum] is a great place to visit. As a bonus, it is located next to the royal palace (and other museums), if you want to expand your cultural expedition._
+Belgium was the home many famous painters, but if you like surrealism, or just appreciate nice and relaxing paintings, the https://musee-magritte-museum.be/en[Magritte Museum] is a great place to visit. As a bonus, it is located next to the royal palace (and other museums) in case you want to expand your cultural expedition.
 
 ==== Chez Cubitus
 
-_If you like playing boardgames while enjoying a fresh beer (or other non-alcoholic beverages), https://chezcubitus.be[this place] is probably for you._
+If you like playing boardgames while enjoying a fresh beer (or other non-alcoholic beverages), https://chezcubitus.be[this place] is probably for you.
 
 ==== Cantillon Brewery
 
-_Did you know that real Gueuze can only be manufactured in Brussels due to a specific yeasts that only exist in the atmosphere of the city and its surroundings?
-If you like this of more acidic beers, or are just curious to discover how an ancestral blending process has evolved to these days, http://www.cantillon.be/[Cantillon Brewery] is surely a reference in that matter. Booking is required for the best experience._
+Did you know that real Gueuze can only be manufactured in Brussels due to a specific yeast that only exist in the atmosphere of the city and its surroundings?
+If you like acidic beers, or are just curious to discover how an ancestral blending process has evolved to these days, http://www.cantillon.be/[Cantillon Brewery] is surely a reference in that matter. Booking is required for the best experience.
 
 === Across Belgium
 
