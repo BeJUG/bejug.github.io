@@ -79,7 +79,7 @@ _https://www.belgium.be/en/about_belgium/tourism/the_coast[65 kilometer long str
 
 According to some the most beautiful coastline in the world, while others hate the many high buildings. We leave the verdict to you...
 
-== To Eat
+== To Eat and Drink
 
 === Antwerp
 
@@ -91,6 +91,10 @@ According to some the most beautiful coastline in the world, while others hate t
 * https://amadeus-resto.be/en/[Amadeus]: all you can eat spareribes, multiple locations, themed "old-timey".
 * https://www.restaurantdebomma.be/[Restaurant De Bomma]: wholesome Belgian food.
 * https://nl-nl.facebook.com/falafeltofantwerpen[Falaffeltof]: fallafels, in case you want a simpler meal.
+* https://caffenation.be/pages/antwerpcitycenter[Caffenation]: _an artisan specialty coffee roastery focused on more than just coffee_.
+* https://normocoffee.be/contact/[Normo]: coffee bar &
+micro roastery.
+* https://kolonelcoffee.be/locations[Kolonel Coffee]: _on a weekly basis we roast for our customers, our own bar, and our wholesale customers_.
 
 === Brussels
 
