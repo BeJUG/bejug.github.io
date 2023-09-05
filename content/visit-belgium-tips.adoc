@@ -8,7 +8,7 @@
 
 During a call with BeJUG members, we collected a list of exciting places to share with the Java community. We know a JUG or conference schedule allows you to fill your days with a lot of Java, but for those of you coming early, staying longer or just looking for a good local restaurant we got you covered.
 
-NOTE: BeJUG did not get any kind of sponsorship nor deal from any of the places listed here. They are tips collected from the community.
+NOTE: BeJUG did not get any kind of sponsorship or deal from any of the places listed here. They are tips collected from the community.
 
 == To See or Visit
 
@@ -30,7 +30,7 @@ _The most fun adventure in Antwerp? A https://www.dekoninck.be/en/interactive-to
 
 ==== The Playground
 
-For boardgame lovers! _Are you up for some games? Browse our collection of more than 400 games that you can play right here in https://www.facebook.com/theplaygroundx/[The Playground]. As a board game café and shop, our aim is to provide you with plenty of games to play, quality coffee, Belgian beers and more._
+For boardgame lovers! _Are you up for some games? Browse our collection of more than 400 games that you can play right here at https://www.facebook.com/theplaygroundx/[The Playground]. As a board game café and shop, our aim is to provide you with plenty of games to play, quality coffee, Belgian beers, and more._
 
 ==== Red Star Line Museum
 
@@ -38,7 +38,7 @@ _Two million passengers made the crossing from Antwerp to North America aboard t
 
 ==== MAS
 
-_The https://mas.be/[MAS aims to be an international and pioneering museum] about the global connectedness between people and collections from different cultures and environments. With a river of tales, viewed from multiple perspectives, we engage everyone to be curious about the present, past and future of Antwerp and the world._
+_The https://mas.be/[MAS aims to be an international and pioneering museum] about the global connectedness between people and collections from different cultures and environments. With a river of tales, viewed from multiple perspectives, we engage everyone to be curious about the present, past, and future of Antwerp and the world._
 
 ==== Plantin-Moretus
 
@@ -48,7 +48,7 @@ _In 1576, Plantin relocated his printing works to the Vrijdagmarkt. His family l
 
 ==== Comics Art Museum
 
-Belgium is famous for its beers and french fries, but missing out on the  influence it had worldwide on the comics art. So if you love the ninth art, don't hesitate to book a tour at https://www.comicscenter.net/en/home[the museum].
+Belgium is famous for its beers and french fries, but missing out on the  influence it had worldwide on comic art. So if you love the ninth art, don't hesitate to book a tour at https://www.comicscenter.net/en/home[the museum].
 
 ==== Magritte Museum
 
@@ -56,12 +56,12 @@ Belgium was the home many famous painters, but if you like surrealism, or just a
 
 ==== Chez Cubitus
 
-If you like playing boardgames while enjoying a fresh beer (or other non-alcoholic beverages), https://chezcubitus.be[this place] is probably for you.
+If you like playing board games while enjoying a fresh beer (or other non-alcoholic beverages), https://chezcubitus.be[this place] is probably for you.
 
 ==== Cantillon Brewery
 
-Did you know that real Gueuze can only be manufactured in Brussels due to a specific yeast that only exist in the atmosphere of the city and its surroundings?
-If you like acidic beers, or are just curious to discover how an ancestral blending process has evolved to these days, http://www.cantillon.be/[Cantillon Brewery] is surely a reference in that matter. Booking is required for the best experience.
+Did you know that real Gueuze can only be manufactured in Brussels due to a specific yeast that only exists in the atmosphere of the city and its surroundings?
+If you like acidic beers or are just curious to discover how an ancestral blending process has evolved these days, http://www.cantillon.be/[Cantillon Brewery] is surely a reference in that matter. Booking is required for the best experience.
 
 === Across Belgium
 
@@ -77,7 +77,7 @@ As "Probably The Best Zoo in Europe," https://www.pairidaiza.eu[Pairi Daiza] is 
 
 _https://www.belgium.be/en/about_belgium/tourism/the_coast[65 kilometer long stretch of sandy coastline with 15 resorts]_.
 
-According to some the most beautiful coast line of the world, while others hate the many high buildings. We leave the verdict to you...
+According to some the most beautiful coastline in the world, while others hate the many high buildings. We leave the verdict to you...
 
 == To Eat
 
@@ -86,7 +86,7 @@ According to some the most beautiful coast line of the world, while others hate 
 * https://www.axxes.be/nl/[Axxes Café/Restaurant Kinepolis]: Mexican and other food.
 * https://takumiramennoodles.com/be/[Takumi]: Japanese noodles and Rice/Curry, multiple locations in the city.
 * https://www.littleseoul.be/en[Little Seoul]: Korean BBQ, more on the pricy side, city center.
-* http://www.baiweichineserestaurant.be/[Bai Wei]: Chinese noodles, chinatown district. The outside looks shabby, inside is ok, food = great.
+* http://www.baiweichineserestaurant.be/[Bai Wei]: Chinese noodles, Chinatown district. The outside looks shabby, the inside is okay, food = great.
 * https://curryosity.be/[Curryosity]: Indian curry. Bit off the beaten path but delicious.
 * https://amadeus-resto.be/en/[Amadeus]: all you can eat spareribes, multiple locations, themed "old-timey".
 * https://www.restaurantdebomma.be/[Restaurant De Bomma]: wholesome Belgian food.
@@ -97,10 +97,15 @@ According to some the most beautiful coast line of the world, while others hate 
 * https://www.visit.brussels/en/visitors/where-to-eat/tram-experience[Tram Experience]: lets you be carried away on a surprising culinary journey in a unique and original atmosphere! Six renowned chefs invite you to discover their gastronomic universes of varied flavors and horizons. Seats are limited...
 * https://www.kokob.be[KoKoB]: Ethiopian food. Traditionally, you eat with your hands, but you can request cutlery too.
 * https://tapaslocas.be/[Tapas Locas]: The best place to eat tapas in Brussels, period.
-* https://schievelavabo.com[Schievelavabo]: Typical belgium tavern food. Several location.
+* https://schievelavabo.com[Schievelavabo]: Typical Belgium tavern food. Several locations.
 * https://tero.be/en/restaurants/tero-restaurant-brussels/[Tero]: Gastronomic restaurant with an emphasis on locally sourced ingredients. More on the pricey side.
 * https://wolf.be[Wolf]: A food market. Ideal for a group that can't agree on the type of food they want to eat. Can be a bit noisy during  high affluence.
 
 === Other Locations
 
-* https://www.biercentral.be/eng/[Bier Central]: _Enjoy Belgian classics in the mecca for true beer lovers in Ghent, Antwerp, Brussels and Mechelen_.
+* https://www.biercentral.be/eng/[Bier Central]: _Enjoy Belgian classics in the mecca for true beer lovers in Ghent, Antwerp, Brussels, and Mechelen_.
+
+== Getting around
+
+* https://www.velo-antwerpen.be/en[Velo] a bicycle-sharing service, you can buy a day/week pass
+* https://www.slimnaarantwerpen.be/en/public-transport/tram-bus[Public transportation] information on how to get around in Antwerpen using public transportation
