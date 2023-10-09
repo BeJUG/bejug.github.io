@@ -12,7 +12,11 @@
             <li class="mb-2">
                 <div class="title">
                     <#if event.eventUrl??>
-                        <a href="${event.eventUrl}">${event.eventName}</a>
+                        <#if event.participationOnly??>
+                            <a data-toggle="tooltip" title="This event is not hosted by us, but we do promote the event." class="link-secondary" href="${event.eventUrl}">${event.eventName}</a>
+                        <#else>
+                            <a class="link-primary" href="${event.eventUrl}">${event.eventName}</a>
+                        </#if>
                     <#else>
                         ${event.eventName}
                     </#if>

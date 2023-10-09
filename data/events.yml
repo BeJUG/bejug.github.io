@@ -12,23 +12,48 @@
 #
 # Order events by date descending
 
+- eventId: 20231115-bejug
+  eventName: "Opentelemetry and continuous feedback & Your tests also need some architecting"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/296580070/
+  location: Brugge
+  date: 2023-11-15
+  talks:
+    - title: "OpenTelemetry and Continuous Feedback - Things you need to know about your Java code at runtime"
+      presenters: Roni Dover
+    - title: "Your tests also need some architecting"
+      presenters: Jonas Geiregat
+
 - eventId: 20231002-devoxx
   eventUrl: https://devoxx.be/
   eventName: "Devoxx 2023"
   location: Antwerp
   date: 2023-10-02
+  participationOnly: true
 
 - eventId: 20230707-bejug
-  eventName: "Growing Beyond Senior"
+  eventName: "Composable Architecture & Event Sourced Applications without Grey Hair"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/295051128/
+  location: Leuven
+  date: 2023-09-07
+  talks:
+    - title: "How Composable Architectures can actually solve the reasons for Microservices"
+      presenters: Edwin Derks
+    - title: "Event Sourced Applications without Grey Hair"
+      presenters: Renato Cavalcanti
+
+- eventId: 20230707-bejug
+  eventName: "Beyond Senior Java Dev"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/294251222/
   location: Gembloux
   date: 2023-07-07
   talks:
-    - title: "Growing Beyond Senior"
-      presenters: Bruno Souza
-  
+    - title: "Beyond Senior Java Dev: the next steps for the technical career"
+      presenters: Bruno "Javaman" Souza
+    - title: "Beyond Senior Java Dev: Q&A with Java Champions"
+      presenters: Bruno "Javaman" Souza, Tom Cools, Edwin Derks, Maarten Mulders
+
 - eventId: 20230622-bejug
-  eventName: "Hybrid Cloud Applications and Cloud-Native Dev Tools"
+  eventName: "Hybrid Cloud Applications & Cloud-Native Dev Tools"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/293805252/
   location: Brussel
   date: 2023-06-22
@@ -43,6 +68,7 @@
   eventName: "Voxxed Days Brussels 2023"
   location: Brussels
   date: 2023-05-23
+  participationOnly: true
 
 - eventId: 20230427-bejug
   eventName: "BeJUG Speaker Training April"
@@ -76,6 +102,7 @@
   eventName: "Fosdem 2023"
   location: Brussels
   date: 2023-02-05
+  participationOnly: true
 
 - eventId: 20230123-bejug
   eventName: "BeJUG January"
