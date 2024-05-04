@@ -12,6 +12,56 @@
 #
 # Order events by date descending
 
+- eventId: 20240423-bejug
+  eventName: "You Can Build Web UI Using Java Only & Braving the Change"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/300215950/
+  location: Haute école Léonard de Vinci
+  date: 2024-04-23
+  talks:
+    - title: "You Can Build Web UI Using Java Only"
+      presenters: Sami Ekblad
+    - title: "Braving the Change: recalibrating to new realities"
+      presenters: Tom Cools
+
+- eventId: 20240319-bejug
+  eventName: "Java 22 - Treats for Everyone & Developer Productivity with Jakarta EE 11"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/299479389/
+  location: Continuum Consulting NV
+  date: 2024-03-19
+  talks:
+    - title: "Java 22 - Treats for Everyone!"
+      presenters: Simon Verhoeven
+    - title: "Boost Performance and Developer Productivity with Jakarta EE 11"
+      presenters: Ivar Grimstad
+ 
+- eventId: 20240226-bejug
+  eventName: "Lille invades Kortrijk: Kestra (Event Orchestrator) + Apache Pulsar (Messaging)"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/298755642/
+  location: Sweet Mustard
+  date: 2024-02-26
+  talks:
+    - title: "Kestra: an OpenSource Event Driven Declarative Orchestrator written in Java"
+      presenters: Loïc Mathieu
+    - title: "Apache Pulsar: Finally an Alternative to Kafka?"
+      presenters: Julien Jakubowski
+  
+- eventId: 20240125-bejug
+  eventName: "Lightning Talk Night!"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/298467787/
+  location: Faculté polytechnique de Mons
+  date: 2024-01-25
+
+- eventId: 20231205-bejug
+  eventName: "Distributed Background Jobs with JobRunr & Maintenance Scheduling with Timefold"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/297395858/
+  location: MeetDistrict Ghelamco Arena
+  date: 2023-12-05
+  talks:
+    - title: "A Java 8 Lambda and JobRunr is all you need for distributed background jobs"
+      presenters: Ronald Dehuysser 
+    - title: "Fold time and space for maintenance scheduling"
+      presenters: Geoffrey De Smet
+
 - eventId: 20231115-bejug
   eventName: "Opentelemetry and continuous feedback & Your tests also need some architecting"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/296580070/

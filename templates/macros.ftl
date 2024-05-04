@@ -36,7 +36,7 @@
                     </#if>
                 </#list>
                 <div class="small float-end">
-                    <a href="https://github.com/belgian-jug/belgian-jug.github.io/blob/main/data/events.yml">Add event</a>
+                    <a href="hhttps://github.com/BeJUG/bejug.github.io/blob/main/data/events.yml">Add event</a>
                     /
                     <a href="${content.rootpath}events-archive.html">Archive</a>
                 </div>
