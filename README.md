@@ -1,5 +1,7 @@
 # Belgian Java User Group
 
+This are the sources for the website you can find on [bejug.github.io](https://bejug.github.io/).
+
 ## Build this website
 
     mvn clean generate-resources
