@@ -1,6 +1,6 @@
 # Belgian Java User Group
 
-This are the sources for the website you can find on [bejug.github.io](https://bejug.github.io/).
+These are the sources for the website, which you can find at [bejug.github.io](https://bejug.github.io/).
 
 ## Build this website
 
