@@ -12,11 +12,11 @@
 #
 # Order events by date descending
 
-- eventId: 20241107-bejug
+- eventId: 20241105-bejug
   eventName: "Secret"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/
   location: /
-  date: 2024-11-07
+  date: 2024-11-05
   talks:
     - title: "Not known yet"
 
