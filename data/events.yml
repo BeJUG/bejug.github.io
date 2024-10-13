@@ -12,7 +12,15 @@
 #
 # Order events by date descending
 
-- eventId: 20240926-bejug
+- eventId: 20241107-bejug
+  eventName: "Secret"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/
+  location: /
+  date: 2024-11-07
+  talks:
+    - title: "Not known yet"
+
+- eventId: 20241026-bejug
   eventName: "Open Rewrite: A la carte"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/303888738
   location: Sopra Steria
