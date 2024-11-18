@@ -12,6 +12,14 @@
 #
 # Order events by date descending
 
+- eventId: 20241202-bejug
+  eventName: "\"Java Evolutions\" with Badr Kacimi and Simon Ritter"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/304395041/
+  location: Colruyt, Zwijnaarde
+  date: 2024-12-02
+  talks:
+    - title: "Java Evolutions"
+
 - eventId: 20241105-bejug
   eventName: "\"Know your Java\" with Dr. Venkat Subramaniam"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/304091973
