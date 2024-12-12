@@ -55,4 +55,5 @@ We act as organizers. We:
 - All attendees must register through the Meetup group. This helps us to expand the group and gives structure to the signup process;
 - As a default, we do not allow employees of the hosting company to present a full session that same evening. Exceptions may be made due to planning constraints;
 - For historical reasons and to not give a company any preferential treatment, we do not leave room for the hosting company to introduce themselves or present any sort of "promo" talk for the company;
+- We do not accept video recording at the event by our partners. This is both to protect our speakers and our visitors. Photos are ok as long as it's done with _explicit_ consent (group photo) or if the attendees are not recognizable (photo taken from the back of the room during a talk).
 - After the event is announced on the official BeJUG channels, the host will receive a set of links (1 for each platform) so they can retweet/repost/share among their own network. 
