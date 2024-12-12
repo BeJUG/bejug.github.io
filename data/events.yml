@@ -23,7 +23,7 @@
 - eventId: 20241105-bejug
   eventName: "\"Know your Java\" with Dr. Venkat Subramaniam"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/304091973
-  location: HE2B - ESI - Ecole Supérieure d'Informatique
+  location: HE2B - ESI - Ecole Supérieure d'Informatique, Brussels
   date: 2024-11-05
   talks:
     - title: "Know your Java"
@@ -31,7 +31,7 @@
 - eventId: 20241026-bejug
   eventName: "Open Rewrite: A la carte"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/303888738
-  location: Sopra Steria
+  location: Sopra Steria, Grimbergen
   date: 2024-10-24
   talks:
     - title: "Open Rewrite: A la carte"
@@ -40,7 +40,7 @@
 - eventId: 20240926-bejug
   eventName: "Testing done right + Maven Marvels"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/303217368
-  location: Burgerij Eilandje - Axxes
+  location: Burgerij Eilandje - Axxes, Antwerp
   date: 2024-09-26
   talks:
     - title: "Testing done right: From bugs to brilliance"
@@ -57,7 +57,7 @@
 - eventId: 20240624-bejug
   eventName: "Pair Programming with GitHub Copilot + Lessons learned from #JavaOnRaspberryPi"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/301217259
-  location: TVH - Vichtseweg 129, 8790 Waregem
+  location: TVH, Waregem
   date: 2024-06-24
   talks:
     - title: "The Future of Pair Programming with GitHub Copilot"
@@ -68,7 +68,7 @@
 - eventId: 20240529-bejug
   eventName: "Generative AI in practice and Future-Proofing Your Software"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/300799323
-  location: Oniryx
+  location: Oniryx, Gembloux
   date: 2024-05-29
   talks:
     - title: "Generative AI in practice: Concrete LLM use cases in Java, with Gemini"
@@ -79,7 +79,7 @@
 - eventId: 20240423-bejug
   eventName: "You Can Build Web UI Using Java Only & Braving the Change"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/300215950/
-  location: Haute école Léonard de Vinci
+  location: Haute école Léonard de Vinci, Woluwe
   date: 2024-04-23
   talks:
     - title: "You Can Build Web UI Using Java Only"
@@ -90,7 +90,7 @@
 - eventId: 20240319-bejug
   eventName: "Java 22 - Treats for Everyone & Developer Productivity with Jakarta EE 11"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/299479389/
-  location: Continuum Consulting NV
+  location: Continuum Consulting NV, Hasselt
   date: 2024-03-19
   talks:
     - title: "Java 22 - Treats for Everyone!"
@@ -101,7 +101,7 @@
 - eventId: 20240226-bejug
   eventName: "Lille invades Kortrijk: Kestra (Event Orchestrator) + Apache Pulsar (Messaging)"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/298755642/
-  location: Sweet Mustard
+  location: Sweet Mustard, Kortrijk
   date: 2024-02-26
   talks:
     - title: "Kestra: an OpenSource Event Driven Declarative Orchestrator written in Java"
@@ -118,7 +118,7 @@
 - eventId: 20231205-bejug
   eventName: "Distributed Background Jobs with JobRunr & Maintenance Scheduling with Timefold"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/297395858/
-  location: MeetDistrict Ghelamco Arena
+  location: MeetDistrict Ghelamco Arena, Gent
   date: 2023-12-05
   talks:
     - title: "A Java 8 Lambda and JobRunr is all you need for distributed background jobs"
@@ -129,7 +129,7 @@
 - eventId: 20231115-bejug
   eventName: "Opentelemetry and continuous feedback & Your tests also need some architecting"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/296580070/
-  location: Brugge
+  location: Liantis, Brugge
   date: 2023-11-15
   talks:
     - title: "OpenTelemetry and Continuous Feedback - Things you need to know about your Java code at runtime"
@@ -147,7 +147,7 @@
 - eventId: 20230707-bejug
   eventName: "Composable Architecture & Event Sourced Applications without Grey Hair"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/295051128/
-  location: Leuven
+  location: AE, Leuven
   date: 2023-09-07
   talks:
     - title: "How Composable Architectures can actually solve the reasons for Microservices"
@@ -158,7 +158,7 @@
 - eventId: 20230707-bejug
   eventName: "Beyond Senior Java Dev"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/294251222/
-  location: Gembloux
+  location: Oniryx, Gembloux
   date: 2023-07-07
   talks:
     - title: "Beyond Senior Java Dev: the next steps for the technical career"
@@ -169,7 +169,7 @@
 - eventId: 20230622-bejug
   eventName: "Hybrid Cloud Applications & Cloud-Native Dev Tools"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/293805252/
-  location: Brussel
+  location: Red Hat, Brussel
   date: 2023-06-22
   talks:
     - title: "Hybrid Cloud Applications Built with Pure Openness"
