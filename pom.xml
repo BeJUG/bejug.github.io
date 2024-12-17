@@ -23,7 +23,7 @@
   <inceptionYear>2022</inceptionYear>
 
   <properties>
-    <version.org.jbake>2.7.0-rc.6</version.org.jbake>
+    <version.org.jbake>2.7.0-rc.7</version.org.jbake>
   </properties>
 
   <build>
