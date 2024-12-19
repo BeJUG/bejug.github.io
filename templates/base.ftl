@@ -20,8 +20,7 @@
 <#--    <link href="${"https://bejug.org/" + _uri}" rel="canonical">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
           integrity="sha256-IUOUHAPazai08QFs7W4MbzTlwEWFo7z/4zw8YmxEiko=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"
-          integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5ba6091273.js" crossorigin="anonymous"></script>
     <link href="${content.rootpath}favicon.png" rel="shortcut icon">
     <style>
         /* Styling for AsciiDoc NOTE */
@@ -60,6 +59,7 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="p-2"><a style="color: #55acee" href="https://twitter.com/BeJUG" role="button"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="p-2"><a style="color: #208bfe" href="https://bsky.app/profile/bejug.bsky.social" role="button"><i class="fa-brands fa-bluesky"></i></a></li>
                     <li class="p-2"><a style="color: #333" href="https://github.com/bejug" role="button"><i class="fa-brands fa-github"></i></a></li>
                 </ul>
             </div>
