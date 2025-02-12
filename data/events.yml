@@ -12,6 +12,26 @@
 #
 # Order events by date descending
 
+- eventId: 20250226-bejug
+  eventName: "AI Powered Applications in Java & Deploying with Confidence - Andres Almiray"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/305958065
+  location: J-Crafters, Kontich
+  date: 2025-02-26
+  talks:
+    - title: "AI Powered Applications in Java & Deploying with Confidence"
+      presenters: Andres Almiray
+
+- eventId: 20250203-bejug
+  eventName: "Introduction to OpenTelemetry and Tulips to Turmeric"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/305632961
+  location: AE, Leuven
+  date: 2025-02-03
+  talks:
+    - title: "Practical introduction to OpenTelemetry tracing"
+      presenters: Nicolas Fränkel
+    - title: "Tulips to Turmeric: Lessons Learned from a Global Team"
+      presenters: Rijo Sam
+    
 - eventId: 20241202-bejug
   eventName: "\"Java Evolutions\" with Badr Kacimi and Simon Ritter"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/304395041/
@@ -19,6 +39,8 @@
   date: 2024-12-02
   talks:
     - title: "Java Evolutions"
+      presenters: Simon Ritter
+
 
 - eventId: 20241105-bejug
   eventName: "\"Know your Java\" with Dr. Venkat Subramaniam"
@@ -27,6 +49,7 @@
   date: 2024-11-05
   talks:
     - title: "Know your Java"
+      presenters: Venkat Subramaniam
 
 - eventId: 20241026-bejug
   eventName: "Open Rewrite: A la carte"
@@ -144,7 +167,7 @@
   date: 2023-10-02
   participationOnly: true
 
-- eventId: 20230707-bejug
+- eventId: 20230907-bejug
   eventName: "Composable Architecture & Event Sourced Applications without Grey Hair"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/295051128/
   location: AE, Leuven
