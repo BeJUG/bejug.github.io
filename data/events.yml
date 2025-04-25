@@ -11,6 +11,25 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20250506-bejug
+  eventName: "Event Driven in the Wild with Kafka"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/307065349/
+  location: Randstad Digital, Leuven
+  date: 2025-05-06
+  talks:
+    - title: "Event Driven in the Wild with Kafka"
+      presenters: Jonas Geiregat
+
+- eventId: 20250424-bejug
+  eventName: "All you need to know about Maven 4"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/307065349/
+  location: NSI, Awans
+  date: 2025-04-24
+  talks:
+    - title: "All you need to know about Maven 4"
+      presenters: Matthias Bünger
+    - title: "Revisiting the visitor pattern using Data-Oriented Programming techniques."
+      presenters: Wim De Troyer
 
 - eventId: 20250226-bejug
   eventName: "AI Powered Applications in Java & Deploying with Confidence - Andres Almiray"
