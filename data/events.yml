@@ -32,29 +32,6 @@
       presenters: Wim De Troyer
 
 - eventId: 20250226-bejug
-  eventName: "AI Powered Applications in Java & Deploying with Confidence"
-  eventUrl: https://www.meetup.com/belgian-java-user-group/events/305632961/
-  location: J-Crafters, Kontich
-  date: 2025-02-26
-  talks:
-    - title: "Deploying to production with confidence"
-      presenters: Andres Almiray
-    - title: "Building AI powered applications with Java"
-      presenters: Andres Almiray
-
-
-- eventId: 20250203-bejug
-  eventName: "Introduction to OpenTelemetry and Tulips to Turmeric"
-  eventUrl: https://www.meetup.com/belgian-java-user-group/events/305632961/
-  location: AE, Heverlee
-  date: 2025-02-03
-  talks:
-    - title: "Practical introduction to OpenTelemetry tracing"
-      presenters: Nicolas Fränkel
-    - title: "Tulips to Turmeric: Lessons Learned from a Global Team"
-      presenters: Rijo Sam
-
-- eventId: 20250226-bejug
   eventName: "AI Powered Applications in Java & Deploying with Confidence - Andres Almiray"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/305958065
   location: J-Crafters, Kontich
