@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>beJUG Raffle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    img {
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+    input {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #333;
+    }
+    button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin: 0.5rem;
+    }
+    button:hover {
+      background-color: #e91e63;
+    }
+    button:disabled {
+      background-color: #777;
+      cursor: not-allowed;
+    }
+    #participantsList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .tag {
+      background-color: #333;
+      padding: 0.4rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+    .tag span {
+      margin-left: 0.5rem;
+      color: #ff4081;
+      cursor: pointer;
+    }
+    .tag span:hover {
+      color: #f44336;
+    }
+    #winner {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4caf50;
+    }
+    #animation {
+      font-size: 2rem;
+      margin-top: 2rem;
+      min-height: 2rem;
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+    #winnerImage {
+      margin-top: 2rem;
+      display: none;
+      min-width: 450px;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="BeJUG Logo" />
+  <h1>BeJUG Raffle</h1>
+  <input type="text" id="nameInput" placeholder="Type a name and press Enter" aria-label="Add participant name" />
+  <div id="participantsList" role="list"></div>
+  <div>
+    <button id="drawButton" onclick="drawWinner()" disabled>Draw Winner</button>
+  </div>
+  <div id="animation"></div>
+  <div id="winner"></div>
+  <img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" />
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <script>
+    const participants = [];
+
+    const nameInput = document.getElementById("nameInput");
+    const participantsList = document.getElementById("participantsList");
+    const drawButton = document.getElementById("drawButton");
+    const winnerDiv = document.getElementById("winner");
+    const animationDiv = document.getElementById("animation");
+    const winnerImage = document.getElementById("winnerImage");
+
+    nameInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const name = e.target.value.trim();
+        if (name && !participants.includes(name)) {
+          participants.push(name);
+          updateParticipantList();
+        }
+        e.target.value = "";
+      }
+    });
+
+    function updateParticipantList() {
+      participantsList.innerHTML = "";
+
+      participants.forEach(name => {
+        const tag = document.createElement("div");
+        tag.className = "tag";
+        tag.setAttribute("role", "listitem");
+        tag.textContent = name;
+
+        const x = document.createElement("span");
+        x.textContent = "×";
+        x.setAttribute("title", "Remove " + name);
+        x.addEventListener("click", () => {
+          const index = participants.indexOf(name);
+          if (index > -1) {
+            participants.splice(index, 1);
+            updateParticipantList();
+          }
+        });
+
+        tag.appendChild(x);
+        participantsList.appendChild(tag);
+      });
+
+      drawButton.disabled = participants.length === 0;
+    }
+
+    function getRandomParticipant() {
+      return participants[Math.floor(Math.random() * participants.length)];
+    }
+
+    function drawWinner() {
+      if (participants.length === 0) return;
+
+      winnerDiv.textContent = "";
+      animationDiv.textContent = "Spinning...";
+      winnerImage.style.display = "none";
+
+      let i = 0;
+      const spinCount = 20;
+
+      const interval = setInterval(() => {
+        animationDiv.textContent = getRandomParticipant();
+        i++;
+        if (i >= spinCount) {
+          clearInterval(interval);
+          const winner = getRandomParticipant();
+          animationDiv.textContent = "";
+          winnerDiv.textContent = `🎉 Winner: ${winner} 🎉`;
+          winnerImage.style.display = "block";
+
+          confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { y: 0.6 }
+          });
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>
