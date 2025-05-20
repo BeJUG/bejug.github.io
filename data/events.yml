@@ -11,6 +11,12 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20250523-bejug
+  eventName: "INFORMAL - 30 Years of Java @ Bier Central (Antwerp)"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/307909476/
+  location: Bier Central, Antwerpen
+  date: 2025-05-23
+
 - eventId: 20250506-bejug
   eventName: "Event Driven in the Wild with Kafka"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/307065349/
@@ -19,6 +25,8 @@
   talks:
     - title: "Event Driven in the Wild with Kafka"
       presenters: Jonas Geiregat
+    - title: "Scared of the ExecutorService? Try JobRunr Jobs instead!"
+      presenters: Wouter Groeneveld
 
 - eventId: 20250424-bejug
   eventName: "All you need to know about Maven 4"
