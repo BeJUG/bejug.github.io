@@ -19,14 +19,76 @@
       max-width: 200px;
       margin-bottom: 1rem;
     }
-    input {
+    .input-section {
       width: 100%;
       max-width: 500px;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    input[type="text"] {
+      width: 100%;
       padding: 0.5rem;
       margin-bottom: 1rem;
       background-color: #1e1e1e;
       color: #ffffff;
       border: 1px solid #333;
+      border-radius: 5px;
+    }
+    .file-upload {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 2px dashed #333;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+      transition: all 0.3s ease;
+    }
+    .file-upload.compact {
+      padding: 0.5rem;
+      gap: 0.5rem;
+    }
+    .upload-label {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ff4081;
+      transition: font-size 0.3s ease;
+    }
+    .upload-label.compact {
+      font-size: 0.9rem;
+    }
+    input[type="file"] {
+      padding: 0.5rem;
+      background-color: #2a2a2a;
+      color: #ffffff;
+      border: 1px solid #555;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="file"]::-webkit-file-upload-button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+    input[type="file"]::-webkit-file-upload-button:hover {
+      background-color: #e91e63;
+    }
+    .file-info {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .file-info.hidden {
+      display: none;
     }
     button {
       background-color: #ff4081;
@@ -45,13 +107,21 @@
       background-color: #777;
       cursor: not-allowed;
     }
+    .clear-button {
+      background-color: #f44336;
+    }
+    .clear-button:hover {
+      background-color: #d32f2f;
+    }
     #participantsList {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      max-width: 500px;
       width: 100%;
       margin-bottom: 1rem;
+      align-items: center;
+      justify-content: center;
+
     }
     .tag {
       background-color: #333;
@@ -68,6 +138,11 @@
     }
     .tag span:hover {
       color: #f44336;
+    }
+    .participants-count {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #4caf50;
     }
     #winner {
       margin-top: 1rem;
@@ -87,104 +162,267 @@
       display: none;
       min-width: 450px;
     }
+    .error-message {
+      color: #f44336;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .success-message {
+      color: #4caf50;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="BeJUG Logo" />
-  <h1>BeJUG Raffle</h1>
+<img src="logo.png" alt="BeJUG Logo" />
+<h1>BeJUG Raffle</h1>
+
+<div class="input-section">
   <input type="text" id="nameInput" placeholder="Type a name and press Enter" aria-label="Add participant name" />
-  <div id="participantsList" role="list"></div>
-  <div>
-    <button id="drawButton" onclick="drawWinner()" disabled>Draw Winner</button>
+
+  <div class="file-upload" id="fileUploadSection">
+    <div class="upload-label" id="uploadLabel">Or upload CSV file with participants:</div>
+    <input type="file" id="csvFile" accept=".csv" aria-label="Upload CSV file" />
+    <div class="file-info" id="fileInfo">Expected CSV format with "Name" column (and other optional columns like Title, Email, etc.)</div>
+    <div id="fileMessage"></div>
   </div>
-  <div id="animation"></div>
-  <div id="winner"></div>
-  <img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" />
+</div>
 
-  <!-- Confetti library -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<div class="participants-count" id="participantsCount">Participants: 0</div>
+<div id="participantsList" role="list"></div>
 
-  <script>
-    const participants = [];
+<div>
+  <button id="drawButton" onclick="drawWinner()" disabled>Draw Winner</button>
+  <button id="clearButton" class="clear-button" onclick="clearAll()" disabled>Clear All</button>
+</div>
 
-    const nameInput = document.getElementById("nameInput");
-    const participantsList = document.getElementById("participantsList");
-    const drawButton = document.getElementById("drawButton");
-    const winnerDiv = document.getElementById("winner");
-    const animationDiv = document.getElementById("animation");
-    const winnerImage = document.getElementById("winnerImage");
+<div id="animation"></div>
+<div id="winner"></div>
+<img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" />
 
-    nameInput.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        const name = e.target.value.trim();
-        if (name && !participants.includes(name)) {
-          participants.push(name);
+<!-- Confetti library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<script>
+  const participants = [];
+
+  const nameInput = document.getElementById("nameInput");
+  const csvFile = document.getElementById("csvFile");
+  const fileUploadSection = document.getElementById("fileUploadSection");
+  const uploadLabel = document.getElementById("uploadLabel");
+  const fileInfo = document.getElementById("fileInfo");
+  const participantsList = document.getElementById("participantsList");
+  const participantsCount = document.getElementById("participantsCount");
+  const drawButton = document.getElementById("drawButton");
+  const clearButton = document.getElementById("clearButton");
+  const winnerDiv = document.getElementById("winner");
+  const animationDiv = document.getElementById("animation");
+  const winnerImage = document.getElementById("winnerImage");
+  const fileMessage = document.getElementById("fileMessage");
+
+  nameInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const name = e.target.value.trim();
+      addParticipant(name);
+      e.target.value = "";
+    }
+  });
+
+  csvFile.addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (file && file.type === "text/csv") {
+      // Make upload section compact
+      makeUploadSectionCompact();
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        try {
+          parseCSV(event.target.result);
+        } catch (error) {
+          showFileMessage("Error reading CSV file: " + error.message, "error");
+        }
+      };
+      reader.readAsText(file);
+    } else if (file) {
+      showFileMessage("Please select a valid CSV file.", "error");
+    }
+  });
+
+  function addParticipant(name) {
+    if (name && !participants.includes(name)) {
+      participants.push(name);
+      updateParticipantList();
+      return true;
+    }
+    return false;
+  }
+
+  function parseCSV(csvText) {
+    const lines = csvText.split('\n');
+    if (lines.length < 2) {
+      showFileMessage("CSV file appears to be empty or invalid.", "error");
+      return;
+    }
+
+    // Parse header to find Name column
+    const header = lines[0].split(',').map(col => col.replace(/"/g, '').trim());
+    const nameIndex = header.findIndex(col => col.toLowerCase() === 'name');
+
+    if (nameIndex === -1) {
+      showFileMessage("CSV file must contain a 'Name' column.", "error");
+      return;
+    }
+
+    let addedCount = 0;
+    let duplicateCount = 0;
+
+    // Parse data rows
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line) {
+        const columns = parseCSVLine(line);
+        if (columns.length > nameIndex) {
+          const name = columns[nameIndex].replace(/"/g, '').trim();
+          if (name) {
+            if (addParticipant(name)) {
+              addedCount++;
+            } else {
+              duplicateCount++;
+            }
+          }
+        }
+      }
+    }
+
+    let message = `Successfully added ${addedCount} participants from CSV.`;
+    if (duplicateCount > 0) {
+      message += ` (${duplicateCount} duplicates skipped)`;
+    }
+    showFileMessage(message, "success");
+  }
+
+  function parseCSVLine(line) {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        result.push(current);
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+
+    result.push(current);
+    return result;
+  }
+
+  function makeUploadSectionCompact() {
+    fileUploadSection.classList.add('compact');
+    uploadLabel.classList.add('compact');
+    fileInfo.classList.add('hidden');
+    uploadLabel.textContent = "CSV file selected";
+  }
+
+  function makeUploadSectionExpanded() {
+    fileUploadSection.classList.remove('compact');
+    uploadLabel.classList.remove('compact');
+    fileInfo.classList.remove('hidden');
+    uploadLabel.textContent = "Or upload CSV file with participants:";
+  }
+
+  function showFileMessage(message, type) {
+    fileMessage.textContent = message;
+    fileMessage.className = type === "error" ? "error-message" : "success-message";
+    setTimeout(() => {
+      fileMessage.textContent = "";
+      fileMessage.className = "";
+    }, 5000);
+  }
+
+  function updateParticipantList() {
+    participantsList.innerHTML = "";
+    participantsCount.textContent = `Participants: ${participants.length}`;
+
+    participants.forEach(name => {
+      const tag = document.createElement("div");
+      tag.className = "tag";
+      tag.setAttribute("role", "listitem");
+      tag.textContent = name;
+
+      const x = document.createElement("span");
+      x.textContent = "×";
+      x.setAttribute("title", "Remove " + name);
+      x.addEventListener("click", () => {
+        const index = participants.indexOf(name);
+        if (index > -1) {
+          participants.splice(index, 1);
           updateParticipantList();
         }
-        e.target.value = "";
-      }
-    });
-
-    function updateParticipantList() {
-      participantsList.innerHTML = "";
-
-      participants.forEach(name => {
-        const tag = document.createElement("div");
-        tag.className = "tag";
-        tag.setAttribute("role", "listitem");
-        tag.textContent = name;
-
-        const x = document.createElement("span");
-        x.textContent = "×";
-        x.setAttribute("title", "Remove " + name);
-        x.addEventListener("click", () => {
-          const index = participants.indexOf(name);
-          if (index > -1) {
-            participants.splice(index, 1);
-            updateParticipantList();
-          }
-        });
-
-        tag.appendChild(x);
-        participantsList.appendChild(tag);
       });
 
-      drawButton.disabled = participants.length === 0;
-    }
+      tag.appendChild(x);
+      participantsList.appendChild(tag);
+    });
 
-    function getRandomParticipant() {
-      return participants[Math.floor(Math.random() * participants.length)];
-    }
+    drawButton.disabled = participants.length === 0;
+    clearButton.disabled = participants.length === 0;
+  }
 
-    function drawWinner() {
-      if (participants.length === 0) return;
+  function clearAll() {
+    participants.length = 0;
+    updateParticipantList();
+    winnerDiv.textContent = "";
+    animationDiv.textContent = "";
+    winnerImage.style.display = "none";
+    csvFile.value = "";
+    makeUploadSectionExpanded();
+    showFileMessage("All participants cleared.", "success");
+  }
 
-      winnerDiv.textContent = "";
-      animationDiv.textContent = "Spinning...";
-      winnerImage.style.display = "none";
+  function getRandomParticipant() {
+    return participants[Math.floor(Math.random() * participants.length)];
+  }
 
-      let i = 0;
-      const spinCount = 20;
+  function drawWinner() {
+    if (participants.length === 0) return;
 
-      const interval = setInterval(() => {
-        animationDiv.textContent = getRandomParticipant();
-        i++;
-        if (i >= spinCount) {
-          clearInterval(interval);
-          const winner = getRandomParticipant();
-          animationDiv.textContent = "";
-          winnerDiv.textContent = `🎉 Winner: ${winner} 🎉`;
-          winnerImage.style.display = "block";
+    winnerDiv.textContent = "";
+    animationDiv.textContent = "Spinning...";
+    winnerImage.style.display = "none";
 
-          confetti({
-            particleCount: 150,
-            spread: 100,
-            origin: { y: 0.6 }
-          });
-        }
-      }, 100);
-    }
-  </script>
+    let i = 0;
+    const spinCount = 20;
+
+    const interval = setInterval(() => {
+      animationDiv.textContent = getRandomParticipant();
+      i++;
+      if (i >= spinCount) {
+        clearInterval(interval);
+        const winner = getRandomParticipant();
+        animationDiv.textContent = "";
+        winnerDiv.textContent = `🎉 Winner: ${winner} 🎉`;
+        winnerImage.style.display = "block";
+
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }
+    }, 100);
+  }
+
+  // Initialize
+  updateParticipantList();
+</script>
 </body>
 </html>
