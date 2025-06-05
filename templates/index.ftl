@@ -19,15 +19,14 @@
             </div>
             <h2>How to</h2>
             <ul class="list-unstyled mb-4">
-                <li>Want to speak at the meetup? Send us a message either on Meetup.com, via DM on Twitter... or talk to us directly at an event.</li>
-                <li>Want to host the BeJUG at your company? Read the partnership guidelines and get in touch!</li>
+                <li>Want to speak at the meetup? Let us know in a <a href="https://github.com/BeJUG/bejug.github.io/issues" target="_blank">GitHub ticket</a> or talk to us directly at an event.</li>
+                <li>Want to host the BeJUG at your company? Read the <a href="/partnership-guidelines.html">partnership guidelines</a> and get in touch!</li>
             </ul>
             <div class="mb-4">
-                <a class="m-1" style="color: #55acee" href="https://twitter.com/BeJUG" role="button"><i class="fa-brands fa-twitter"></i></a>
-                <a style="color: #208bfe" href="https://bsky.app/profile/bejug.bsky.social" role="button"><i class="fa-brands fa-bluesky"></i></a>
-                <a class="m-1" style="color: #0077b5" href="https://www.linkedin.com/groups/155664/" role="button"><i class="fa-brands fa-linkedin"></i></a>
-<#--		        <a class="m-1" style="color: #ff0000" href="https://youtube.com/@bejug" role="button"><i class="fa-brands fa-youtube"></i></a>-->
-                <a class="m-1" style="color: #333" href="https://github.com/bejug" role="button"><i class="fa-brands fa-github"></i></a>
+                <a class="m-1" style="color: #208bfe" href="https://bsky.app/profile/bejug.bsky.social" target="_blank" role="button"><i class="fa-brands fa-bluesky"></i></a>
+                <a class="m-1" style="color: #6364ff" href="https://foojay.social/@BeJUG" target="_blank" role="button"><i class="fa-brands fa-mastodon"></i></a>
+                <a class="m-1" style="color: #0077b5" href="https://www.linkedin.com/groups/155664/" target="_blank" role="button"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="m-1" style="color: #333" href="https://github.com/bejug" target="_blank" role="button"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </@parent.layout>
