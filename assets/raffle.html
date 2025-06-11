@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>beJUG Raffle</title>
-  <style>
+  <title>BeJUG Raffle</title>
+  <style id="mainStyles">
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -64,12 +64,13 @@
       display: flex;
       align-items: center;
     }
-    input[type="file"] {
+    .file-input-wrapper input[type="file"] {
       position: absolute;
       opacity: 0;
       width: 100%;
       height: 100%;
       cursor: pointer;
+      z-index: 1;
     }
     .file-input-label {
       background-color: #ff4081;
@@ -130,7 +131,6 @@
       margin-bottom: 1rem;
       align-items: center;
       justify-content: center;
-
     }
     .tag {
       background-color: #333;
@@ -181,11 +181,214 @@
       margin-top: 0.5rem;
       font-size: 0.9rem;
     }
+
+    /* Customization Panel Styles */
+    .customization-panel {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      height: 100vh;
+      background-color: #1a1a1a;
+      border-left: 2px solid #333;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .customization-panel.open {
+      right: 0;
+    }
+
+    .customize-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 1001;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .customize-toggle:hover {
+      background-color: #e91e63;
+    }
+
+    .customization-section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .customization-section:last-child {
+      border-bottom: none;
+    }
+
+    .customization-section h3 {
+      color: #ff4081;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #2a2a2a;
+      color: #ffffff;
+      border: 1px solid #444;
+      border-radius: 5px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: auto;
+    }
+
+    .form-group input[type="file"] {
+      position: static;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+      min-height: 200px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      resize: vertical;
+    }
+
+    .customize-button {
+      background-color: #4caf50;
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+
+    .customize-button:hover {
+      background-color: #45a049;
+    }
+
+    .reset-button {
+      background-color: #f44336;
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+
+    .reset-button:hover {
+      background-color: #d32f2f;
+    }
+
+    .logo-preview {
+      max-width: 100px;
+      max-height: 100px;
+      margin-top: 0.5rem;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    .close-panel {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+    }
+
+    .close-panel:hover {
+      color: #fff;
+      background: none;
+    }
+
+    @media (max-width: 768px) {
+      .customization-panel {
+        width: 100%;
+        right: -100%;
+      }
+    }
   </style>
 </head>
 <body>
-<img src="logo.png" alt="BeJUG Logo" />
-<h1>BeJUG Raffle</h1>
+<!-- Customize Toggle Button -->
+<button class="customize-toggle" onclick="toggleCustomizationPanel()" title="Customize">⚙️</button>
+
+<!-- Customization Panel -->
+<div class="customization-panel" id="customizationPanel">
+  <button class="close-panel" onclick="toggleCustomizationPanel()">×</button>
+
+  <div class="customization-section">
+    <h3>Title Customization</h3>
+    <div class="form-group">
+      <label for="titleInput">Page Title:</label>
+      <input type="text" id="titleInput" value="BeJUG Raffle" placeholder="Enter page title">
+    </div>
+    <button class="customize-button" onclick="updateTitle()">Update Title</button>
+  </div>
+
+  <div class="customization-section">
+    <h3>Logo Customization</h3>
+    <div class="form-group">
+      <label for="logoInput">Logo URL or upload file:</label>
+      <input type="text" id="logoInput" placeholder="Enter logo URL or upload below">
+    </div>
+    <div class="form-group">
+      <label for="logoFile">Or upload logo file:</label>
+      <input type="file" id="logoFile" accept="image/*">
+    </div>
+    <img id="logoPreview" class="logo-preview" style="display: none;" alt="Logo Preview">
+    <button class="customize-button" onclick="updateLogo()">Update Logo</button>
+  </div>
+
+  <div class="customization-section">
+    <h3>CSS Customization</h3>
+    <div class="form-group">
+      <label for="cssInput">Custom CSS (will be added to existing styles):</label>
+      <textarea id="cssInput" placeholder="Enter your custom CSS here...
+Example:
+body { background: linear-gradient(45deg, #1a1a2e, #16213e); }
+button { border-radius: 25px; }
+.tag { background-color: #4a90e2; }"></textarea>
+    </div>
+    <button class="customize-button" onclick="updateCSS()">Apply CSS</button>
+    <button class="reset-button" onclick="resetCSS()">Reset CSS</button>
+  </div>
+
+  <div class="customization-section">
+    <h3>Export/Import Settings</h3>
+    <button class="customize-button" onclick="exportSettings()">Export Settings</button>
+    <div class="form-group">
+      <label for="importSettings">Import Settings:</label>
+      <input type="file" id="importSettings" accept=".json">
+    </div>
+    <button class="customize-button" onclick="importSettingsFromFile()">Import Settings</button>
+  </div>
+</div>
+
+<img id="mainLogo" src="logo.png" alt="Logo" />
+<h1 id="mainTitle">BeJUG Raffle</h1>
 
 <div class="input-section">
   <div class="unified-input" id="unifiedInputSection">
@@ -235,6 +438,18 @@
   const winnerImage = document.getElementById("winnerImage");
   const fileMessage = document.getElementById("fileMessage");
 
+  // Customization elements
+  const customizationPanel = document.getElementById("customizationPanel");
+  const titleInput = document.getElementById("titleInput");
+  const logoInput = document.getElementById("logoInput");
+  const logoFile = document.getElementById("logoFile");
+  const logoPreview = document.getElementById("logoPreview");
+  const cssInput = document.getElementById("cssInput");
+  const mainLogo = document.getElementById("mainLogo");
+  const mainTitle = document.getElementById("mainTitle");
+  const importSettingsFile = document.getElementById("importSettings");
+
+  // Original raffle functionality
   nameInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -247,7 +462,6 @@
   csvFile.addEventListener("change", function (e) {
     const file = e.target.files[0];
     if (file && file.type === "text/csv") {
-      // Make input section compact and update button
       makeInputSectionCompact();
       fileInputLabel.textContent = "✓ CSV Loaded";
       fileInputLabel.classList.add('file-selected');
@@ -263,6 +477,37 @@
       reader.readAsText(file);
     } else if (file) {
       showFileMessage("Please select a valid CSV file.", "error");
+    }
+  });
+
+  // Logo file upload handler
+  logoFile.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        logoInput.value = event.target.result;
+        logoPreview.src = event.target.result;
+        logoPreview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Settings import handler
+  importSettingsFile.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file && file.type === "application/json") {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const settings = JSON.parse(event.target.result);
+          applyImportedSettings(settings);
+        } catch (error) {
+          alert("Error importing settings: " + error.message);
+        }
+      };
+      reader.readAsText(file);
     }
   });
 
@@ -282,7 +527,6 @@
       return;
     }
 
-    // Parse header to find Name column
     const header = lines[0].split(',').map(col => col.replace(/"/g, '').trim());
     const nameIndex = header.findIndex(col => col.toLowerCase() === 'name');
 
@@ -294,7 +538,6 @@
     let addedCount = 0;
     let duplicateCount = 0;
 
-    // Parse data rows
     for (let i = 1; i < lines.length; i++) {
       const line = lines[i].trim();
       if (line) {
@@ -439,8 +682,115 @@
     }, 100);
   }
 
+  // Customization functions
+  function toggleCustomizationPanel() {
+    customizationPanel.classList.toggle("open");
+  }
+
+  function updateTitle() {
+    const newTitle = titleInput.value.trim();
+    if (newTitle) {
+      mainTitle.textContent = newTitle;
+      document.title = newTitle;
+      saveSettings();
+    }
+  }
+
+  function updateLogo() {
+    const logoUrl = logoInput.value.trim();
+    if (logoUrl) {
+      mainLogo.src = logoUrl;
+      mainLogo.style.display = 'block';
+      saveSettings();
+    }
+  }
+
+  function updateCSS() {
+    const customCSS = cssInput.value.trim();
+    if (customCSS) {
+      let customStyleElement = document.getElementById('customStyles');
+      if (!customStyleElement) {
+        customStyleElement = document.createElement('style');
+        customStyleElement.id = 'customStyles';
+        document.head.appendChild(customStyleElement);
+      }
+      customStyleElement.textContent = customCSS;
+      saveSettings();
+    }
+  }
+
+  function resetCSS() {
+    const customStyleElement = document.getElementById('customStyles');
+    if (customStyleElement) {
+      customStyleElement.remove();
+    }
+    cssInput.value = '';
+    saveSettings();
+  }
+
+  function saveSettings() {
+    const settings = {
+      title: mainTitle.textContent,
+      logoUrl: mainLogo.src,
+      customCSS: cssInput.value
+    };
+    // Store in memory for this session
+    window.currentSettings = settings;
+  }
+
+  function exportSettings() {
+    const settings = {
+      title: mainTitle.textContent,
+      logoUrl: mainLogo.src,
+      customCSS: cssInput.value
+    };
+
+    const dataStr = JSON.stringify(settings, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = 'raffle-settings.json';
+    link.click();
+  }
+
+  function importSettingsFromFile() {
+    const file = importSettingsFile.files[0];
+    if (!file) {
+      alert("Please select a settings file to import.");
+      return;
+    }
+  }
+
+  function applyImportedSettings(settings) {
+    if (settings.title) {
+      titleInput.value = settings.title;
+      updateTitle();
+    }
+
+    if (settings.logoUrl) {
+      logoInput.value = settings.logoUrl;
+      updateLogo();
+    }
+
+    if (settings.customCSS) {
+      cssInput.value = settings.customCSS;
+      updateCSS();
+    }
+
+    alert("Settings imported successfully!");
+  }
+
   // Initialize
   updateParticipantList();
+
+  // Load saved settings if available
+  if (window.currentSettings) {
+    const settings = window.currentSettings;
+    if (settings.title) titleInput.value = settings.title;
+    if (settings.logoUrl) logoInput.value = settings.logoUrl;
+    if (settings.customCSS) cssInput.value = settings.customCSS;
+  }
 </script>
 </body>
 </html>
