@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self';">
   <title>BeJUG Raffle</title>
   <style id="mainStyles">
     body {
@@ -343,7 +344,7 @@
     <h3>Title Customization</h3>
     <div class="form-group">
       <label for="titleInput">Page Title:</label>
-      <input type="text" id="titleInput" value="BeJUG Raffle" placeholder="Enter page title">
+      <input type="text" id="titleInput" value="BeJUG Raffle" placeholder="Enter page title" maxlength="100">
     </div>
     <button class="customize-button" onclick="updateTitle()">Update Title</button>
   </div>
@@ -351,12 +352,8 @@
   <div class="customization-section">
     <h3>Logo Customization</h3>
     <div class="form-group">
-      <label for="logoInput">Logo URL or upload file:</label>
-      <input type="text" id="logoInput" placeholder="Enter logo URL or upload below">
-    </div>
-    <div class="form-group">
-      <label for="logoFile">Or upload logo file:</label>
-      <input type="file" id="logoFile" accept="image/*">
+      <label for="logoFile">Upload logo file:</label>
+      <input type="file" id="logoFile" accept="image/png,image/jpeg,image/gif,image/webp">
     </div>
     <img id="logoPreview" class="logo-preview" style="display: none;" alt="Logo Preview">
     <button class="customize-button" onclick="updateLogo()">Update Logo</button>
@@ -365,12 +362,12 @@
   <div class="customization-section">
     <h3>CSS Customization</h3>
     <div class="form-group">
-      <label for="cssInput">Custom CSS (will be added to existing styles):</label>
+      <label for="cssInput">Custom CSS (will be added to existing styles, here's <a href="./css-samle.css" target="_blank">an example</a>):</label>
       <textarea id="cssInput" placeholder="Enter your custom CSS here...
 Example:
 body { background: linear-gradient(45deg, #1a1a2e, #16213e); }
 button { border-radius: 25px; }
-.tag { background-color: #4a90e2; }"></textarea>
+.tag { background-color: #4a90e2; }" maxlength="10000"></textarea>
     </div>
     <button class="customize-button" onclick="updateCSS()">Apply CSS</button>
     <button class="reset-button" onclick="resetCSS()">Reset CSS</button>
@@ -387,14 +384,14 @@ button { border-radius: 25px; }
   </div>
 </div>
 
-<img id="mainLogo" src="logo.png" alt="Logo" />
+<img id="mainLogo" src="logo.png" alt="Logo" onerror="this.style.display='none'" />
 <h1 id="mainTitle">BeJUG Raffle</h1>
 
 <div class="input-section">
   <div class="unified-input" id="unifiedInputSection">
     <div class="input-header" id="inputHeader">Add participants manually or upload CSV file:</div>
     <div class="input-controls">
-      <input type="text" id="nameInput" placeholder="Type a name and press Enter" aria-label="Add participant name" />
+      <input type="text" id="nameInput" placeholder="Type a name and press Enter" aria-label="Add participant name" maxlength="100" />
       <div class="file-input-wrapper">
         <input type="file" id="csvFile" accept=".csv" aria-label="Upload CSV file" />
         <span class="file-input-label">Choose CSV</span>
@@ -415,13 +412,15 @@ button { border-radius: 25px; }
 
 <div id="animation"></div>
 <div id="winner"></div>
-<img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" />
+<img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" onerror="this.style.display='none'" />
 
 <!-- Confetti library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" integrity="sha512-8jbyO5lLb9jGPfyVTGNDGgP4mPJvnMQOvM2FhyXxmgfnFwEqczELoWgUNJOv7YWY2SdRUCkEkYJ9D1D2KzUYnw==" crossorigin="anonymous"></script>
 
 <script>
   const participants = [];
+  const MAX_PARTICIPANTS = 1000;
+  const MAX_NAME_LENGTH = 100;
 
   const nameInput = document.getElementById("nameInput");
   const csvFile = document.getElementById("csvFile");
@@ -441,7 +440,6 @@ button { border-radius: 25px; }
   // Customization elements
   const customizationPanel = document.getElementById("customizationPanel");
   const titleInput = document.getElementById("titleInput");
-  const logoInput = document.getElementById("logoInput");
   const logoFile = document.getElementById("logoFile");
   const logoPreview = document.getElementById("logoPreview");
   const cssInput = document.getElementById("cssInput");
@@ -449,11 +447,61 @@ button { border-radius: 25px; }
   const mainTitle = document.getElementById("mainTitle");
   const importSettingsFile = document.getElementById("importSettings");
 
-  // Original raffle functionality
+  // Security: Input sanitization function
+  function sanitizeInput(input) {
+    if (typeof input !== 'string') return '';
+    return input.replace(/[<>\"'&]/g, function(match) {
+      const escapeMap = {
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        '&': '&amp;'
+      };
+      return escapeMap[match];
+    }).trim();
+  }
+
+  // Security: Validate CSS to prevent malicious code
+  function sanitizeCSS(css) {
+    // Remove dangerous CSS functions and properties
+    const dangerous = [
+      /javascript:/gi,
+      /expression\s*\(/gi,
+      /url\s*\(\s*["']?data:/gi,
+      /@import/gi,
+      /behavior\s*:/gi,
+      /-moz-binding/gi,
+      /vbscript:/gi
+    ];
+
+    let sanitized = css;
+    dangerous.forEach(pattern => {
+      sanitized = sanitized.replace(pattern, '/* removed */');
+    });
+
+    return sanitized;
+  }
+
+  // Security: Validate file types more strictly
+  function isValidImageFile(file) {
+    const allowedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp'];
+    return allowedTypes.includes(file.type) && file.size < 5 * 1024 * 1024; // 5MB limit
+  }
+
+  function isValidCSVFile(file) {
+    return file.type === 'text/csv' && file.size < 10 * 1024 * 1024; // 10MB limit
+  }
+
+  // Original raffle functionality with security improvements
   nameInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      const name = e.target.value.trim();
+      const name = sanitizeInput(e.target.value);
+      if (name.length > MAX_NAME_LENGTH) {
+        showFileMessage("Name is too long (max 100 characters).", "error");
+        return;
+      }
       addParticipant(name);
       e.target.value = "";
     }
@@ -461,7 +509,7 @@ button { border-radius: 25px; }
 
   csvFile.addEventListener("change", function (e) {
     const file = e.target.files[0];
-    if (file && file.type === "text/csv") {
+    if (file && isValidCSVFile(file)) {
       makeInputSectionCompact();
       fileInputLabel.textContent = "✓ CSV Loaded";
       fileInputLabel.classList.add('file-selected');
@@ -471,49 +519,58 @@ button { border-radius: 25px; }
         try {
           parseCSV(event.target.result);
         } catch (error) {
-          showFileMessage("Error reading CSV file: " + error.message, "error");
+          showFileMessage("Error reading CSV file: " + sanitizeInput(error.message), "error");
         }
       };
       reader.readAsText(file);
     } else if (file) {
-      showFileMessage("Please select a valid CSV file.", "error");
+      showFileMessage("Please select a valid CSV file (max 10MB).", "error");
     }
   });
 
-  // Logo file upload handler
+  // Logo file upload handler with security improvements
   logoFile.addEventListener("change", function(e) {
     const file = e.target.files[0];
-    if (file && file.type.startsWith('image/')) {
+    if (file && isValidImageFile(file)) {
       const reader = new FileReader();
       reader.onload = function(event) {
-        logoInput.value = event.target.result;
         logoPreview.src = event.target.result;
         logoPreview.style.display = 'block';
       };
       reader.readAsDataURL(file);
+    } else if (file) {
+      showFileMessage("Please select a valid image file (PNG, JPEG, GIF, WebP, max 5MB).", "error");
     }
   });
 
-  // Settings import handler
+  // Settings import handler with security improvements
   importSettingsFile.addEventListener("change", function(e) {
     const file = e.target.files[0];
-    if (file && file.type === "application/json") {
+    if (file && file.type === "application/json" && file.size < 1024 * 1024) { // 1MB limit
       const reader = new FileReader();
       reader.onload = function(event) {
         try {
           const settings = JSON.parse(event.target.result);
           applyImportedSettings(settings);
         } catch (error) {
-          alert("Error importing settings: " + error.message);
+          alert("Error importing settings: Invalid JSON file");
         }
       };
       reader.readAsText(file);
+    } else {
+      alert("Please select a valid JSON file (max 1MB).");
     }
   });
 
   function addParticipant(name) {
-    if (name && !participants.includes(name)) {
-      participants.push(name);
+    if (participants.length >= MAX_PARTICIPANTS) {
+      showFileMessage("Maximum number of participants reached (1000).", "error");
+      return false;
+    }
+
+    const sanitizedName = sanitizeInput(name);
+    if (sanitizedName && !participants.includes(sanitizedName)) {
+      participants.push(sanitizedName);
       updateParticipantList();
       return true;
     }
@@ -521,13 +578,13 @@ button { border-radius: 25px; }
   }
 
   function parseCSV(csvText) {
-    const lines = csvText.split('\n');
+    const lines = csvText.split('\n').slice(0, MAX_PARTICIPANTS + 1); // Limit lines
     if (lines.length < 2) {
       showFileMessage("CSV file appears to be empty or invalid.", "error");
       return;
     }
 
-    const header = lines[0].split(',').map(col => col.replace(/"/g, '').trim());
+    const header = lines[0].split(',').map(col => sanitizeInput(col.replace(/"/g, '')));
     const nameIndex = header.findIndex(col => col.toLowerCase() === 'name');
 
     if (nameIndex === -1) {
@@ -538,13 +595,13 @@ button { border-radius: 25px; }
     let addedCount = 0;
     let duplicateCount = 0;
 
-    for (let i = 1; i < lines.length; i++) {
+    for (let i = 1; i < lines.length && participants.length < MAX_PARTICIPANTS; i++) {
       const line = lines[i].trim();
       if (line) {
         const columns = parseCSVLine(line);
         if (columns.length > nameIndex) {
-          const name = columns[nameIndex].replace(/"/g, '').trim();
-          if (name) {
+          const name = sanitizeInput(columns[nameIndex].replace(/"/g, ''));
+          if (name && name.length <= MAX_NAME_LENGTH) {
             if (addParticipant(name)) {
               addedCount++;
             } else {
@@ -601,7 +658,7 @@ button { border-radius: 25px; }
   }
 
   function showFileMessage(message, type) {
-    fileMessage.textContent = message;
+    fileMessage.textContent = sanitizeInput(message);
     fileMessage.className = type === "error" ? "error-message" : "success-message";
     setTimeout(() => {
       fileMessage.textContent = "";
@@ -617,7 +674,7 @@ button { border-radius: 25px; }
       const tag = document.createElement("div");
       tag.className = "tag";
       tag.setAttribute("role", "listitem");
-      tag.textContent = name;
+      tag.textContent = name; // Already sanitized
 
       const x = document.createElement("span");
       x.textContent = "×";
@@ -673,23 +730,25 @@ button { border-radius: 25px; }
         winnerDiv.textContent = `🎉 Winner: ${winner} 🎉`;
         winnerImage.style.display = "block";
 
-        confetti({
-          particleCount: 150,
-          spread: 100,
-          origin: { y: 0.6 }
-        });
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { y: 0.6 }
+          });
+        }
       }
     }, 100);
   }
 
-  // Customization functions
+  // Customization functions with security improvements
   function toggleCustomizationPanel() {
     customizationPanel.classList.toggle("open");
   }
 
   function updateTitle() {
-    const newTitle = titleInput.value.trim();
-    if (newTitle) {
+    const newTitle = sanitizeInput(titleInput.value);
+    if (newTitle && newTitle.length <= 100) {
       mainTitle.textContent = newTitle;
       document.title = newTitle;
       saveSettings();
@@ -697,17 +756,16 @@ button { border-radius: 25px; }
   }
 
   function updateLogo() {
-    const logoUrl = logoInput.value.trim();
-    if (logoUrl) {
-      mainLogo.src = logoUrl;
+    if (logoPreview.src && logoPreview.style.display !== 'none') {
+      mainLogo.src = logoPreview.src;
       mainLogo.style.display = 'block';
       saveSettings();
     }
   }
 
   function updateCSS() {
-    const customCSS = cssInput.value.trim();
-    if (customCSS) {
+    const customCSS = sanitizeCSS(cssInput.value.trim());
+    if (customCSS && customCSS.length <= 10000) {
       let customStyleElement = document.getElementById('customStyles');
       if (!customStyleElement) {
         customStyleElement = document.createElement('style');
@@ -731,18 +789,16 @@ button { border-radius: 25px; }
   function saveSettings() {
     const settings = {
       title: mainTitle.textContent,
-      logoUrl: mainLogo.src,
+      logoSrc: mainLogo.src.startsWith('data:') ? mainLogo.src : '',
       customCSS: cssInput.value
     };
-    // Store in memory for this session
     window.currentSettings = settings;
   }
 
   function exportSettings() {
     const settings = {
-      title: mainTitle.textContent,
-      logoUrl: mainLogo.src,
-      customCSS: cssInput.value
+      title: sanitizeInput(mainTitle.textContent),
+      customCSS: sanitizeCSS(cssInput.value)
     };
 
     const dataStr = JSON.stringify(settings, null, 2);
@@ -752,6 +808,7 @@ button { border-radius: 25px; }
     link.href = URL.createObjectURL(dataBlob);
     link.download = 'raffle-settings.json';
     link.click();
+    URL.revokeObjectURL(link.href);
   }
 
   function importSettingsFromFile() {
@@ -763,18 +820,13 @@ button { border-radius: 25px; }
   }
 
   function applyImportedSettings(settings) {
-    if (settings.title) {
-      titleInput.value = settings.title;
+    if (settings.title && typeof settings.title === 'string') {
+      titleInput.value = sanitizeInput(settings.title).substring(0, 100);
       updateTitle();
     }
 
-    if (settings.logoUrl) {
-      logoInput.value = settings.logoUrl;
-      updateLogo();
-    }
-
-    if (settings.customCSS) {
-      cssInput.value = settings.customCSS;
+    if (settings.customCSS && typeof settings.customCSS === 'string') {
+      cssInput.value = sanitizeCSS(settings.customCSS).substring(0, 10000);
       updateCSS();
     }
 
@@ -787,9 +839,8 @@ button { border-radius: 25px; }
   // Load saved settings if available
   if (window.currentSettings) {
     const settings = window.currentSettings;
-    if (settings.title) titleInput.value = settings.title;
-    if (settings.logoUrl) logoInput.value = settings.logoUrl;
-    if (settings.customCSS) cssInput.value = settings.customCSS;
+    if (settings.title) titleInput.value = sanitizeInput(settings.title);
+    if (settings.customCSS) cssInput.value = sanitizeCSS(settings.customCSS);
   }
 </script>
 </body>
