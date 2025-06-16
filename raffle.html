@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>beJUG Raffle</title>
-  <style>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self';">
+  <title>BeJUG Raffle</title>
+  <style id="mainStyles">
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -64,12 +65,13 @@
       display: flex;
       align-items: center;
     }
-    input[type="file"] {
+    .file-input-wrapper input[type="file"] {
       position: absolute;
       opacity: 0;
       width: 100%;
       height: 100%;
       cursor: pointer;
+      z-index: 1;
     }
     .file-input-label {
       background-color: #ff4081;
@@ -130,7 +132,6 @@
       margin-bottom: 1rem;
       align-items: center;
       justify-content: center;
-
     }
     .tag {
       background-color: #333;
@@ -181,17 +182,216 @@
       margin-top: 0.5rem;
       font-size: 0.9rem;
     }
+
+    /* Customization Panel Styles */
+    .customization-panel {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      height: 100vh;
+      background-color: #1a1a1a;
+      border-left: 2px solid #333;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .customization-panel.open {
+      right: 0;
+    }
+
+    .customize-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #45a049;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 1001;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .customize-toggle:hover {
+      background-color: #45a049;
+    }
+
+    .customization-section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .customization-section:last-child {
+      border-bottom: none;
+    }
+
+    .customization-section h3 {
+      color: #ff4081;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #2a2a2a;
+      color: #ffffff;
+      border: 1px solid #444;
+      border-radius: 5px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: auto;
+    }
+
+    .form-group input[type="file"] {
+      position: static;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+      min-height: 200px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      resize: vertical;
+    }
+
+    .customize-button {
+      background-color: #4caf50;
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+
+    .customize-button:hover {
+      background-color: #45a049;
+    }
+
+    .reset-button {
+      background-color: #f44336;
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+
+    .reset-button:hover {
+      background-color: #d32f2f;
+    }
+
+    .logo-preview {
+      max-width: 100px;
+      max-height: 100px;
+      margin-top: 0.5rem;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    .close-panel {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+    }
+
+    .close-panel:hover {
+      color: #fff;
+      background: none;
+    }
+
+    @media (max-width: 768px) {
+      .customization-panel {
+        width: 100%;
+        right: -100%;
+      }
+    }
   </style>
 </head>
 <body>
-<img src="logo.png" alt="BeJUG Logo" />
-<h1>BeJUG Raffle</h1>
+<!-- Customize Toggle Button -->
+<button class="customize-toggle" onclick="toggleCustomizationPanel()" title="Customize">⚙️</button>
+
+<!-- Customization Panel -->
+<div class="customization-panel" id="customizationPanel">
+  <!--<button class="close-panel" onclick="toggleCustomizationPanel()">×</button>-->
+
+  <div class="customization-section">
+    <h3>Title Customization</h3>
+    <div class="form-group">
+      <label for="titleInput">Page Title:</label>
+      <input type="text" id="titleInput" value="BeJUG Raffle" placeholder="Enter page title" maxlength="100">
+    </div>
+    <button class="customize-button" onclick="updateTitle()">Update Title</button>
+  </div>
+
+  <div class="customization-section">
+    <h3>Logo Customization</h3>
+    <div class="form-group">
+      <label for="logoFile">Upload logo file:</label>
+      <input type="file" id="logoFile" accept="image/png,image/jpeg,image/gif,image/webp">
+    </div>
+    <img id="logoPreview" class="logo-preview" style="display: none;" alt="Logo Preview">
+    <button class="customize-button" onclick="updateLogo()">Update Logo</button>
+  </div>
+
+  <div class="customization-section">
+    <h3>CSS Customization</h3>
+    <div class="form-group">
+      <label for="cssInput">Custom CSS (will be added to existing styles, here's <a href="./css-sample.css" target="_blank">an example</a>):</label>
+      <textarea id="cssInput" placeholder="Enter your custom CSS here...
+Example:
+body { background: linear-gradient(45deg, #1a1a2e, #16213e); }
+button { border-radius: 25px; }
+.tag { background-color: #4a90e2; }" maxlength="10000"></textarea>
+    </div>
+    <button class="customize-button" onclick="updateCSS()">Apply CSS</button>
+    <button class="reset-button" onclick="resetCSS()">Reset CSS</button>
+  </div>
+
+  <div class="customization-section">
+    <h3>Export/Import Settings</h3>
+    <button class="customize-button" onclick="exportSettings()">Export Settings</button>
+    <div class="form-group">
+      <label for="importSettings">Import Settings:</label>
+      <input type="file" id="importSettings" accept=".json">
+    </div>
+    <button class="customize-button" onclick="importSettingsFromFile()">Import Settings</button>
+  </div>
+</div>
+
+<img id="mainLogo" src="logo.png" alt="Logo" onerror="this.style.display='none'" />
+<h1 id="mainTitle">BeJUG Raffle</h1>
 
 <div class="input-section">
   <div class="unified-input" id="unifiedInputSection">
     <div class="input-header" id="inputHeader">Add participants manually or upload CSV file:</div>
     <div class="input-controls">
-      <input type="text" id="nameInput" placeholder="Type a name and press Enter" aria-label="Add participant name" />
+      <input type="text" id="nameInput" placeholder="Type a name and press Enter" aria-label="Add participant name" maxlength="100" />
       <div class="file-input-wrapper">
         <input type="file" id="csvFile" accept=".csv" aria-label="Upload CSV file" />
         <span class="file-input-label">Choose CSV</span>
@@ -212,13 +412,15 @@
 
 <div id="animation"></div>
 <div id="winner"></div>
-<img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" />
+<img id="winnerImage" src="duke-celebration.png" alt="Winner Celebration Image" onerror="this.style.display='none'" />
 
 <!-- Confetti library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" integrity="sha512-8jbyO5lLb9jGPfyVTGNDGgP4mPJvnMQOvM2FhyXxmgfnFwEqczELoWgUNJOv7YWY2SdRUCkEkYJ9D1D2KzUYnw==" crossorigin="anonymous"></script>
 
 <script>
   const participants = [];
+  const MAX_PARTICIPANTS = 1000;
+  const MAX_NAME_LENGTH = 100;
 
   const nameInput = document.getElementById("nameInput");
   const csvFile = document.getElementById("csvFile");
@@ -235,10 +437,71 @@
   const winnerImage = document.getElementById("winnerImage");
   const fileMessage = document.getElementById("fileMessage");
 
+  // Customization elements
+  const customizationPanel = document.getElementById("customizationPanel");
+  const titleInput = document.getElementById("titleInput");
+  const logoFile = document.getElementById("logoFile");
+  const logoPreview = document.getElementById("logoPreview");
+  const cssInput = document.getElementById("cssInput");
+  const mainLogo = document.getElementById("mainLogo");
+  const mainTitle = document.getElementById("mainTitle");
+  const importSettingsFile = document.getElementById("importSettings");
+
+  // Security: Input sanitization function
+  function sanitizeInput(input) {
+    if (typeof input !== 'string') return '';
+    return input.replace(/[<>"'&]/g, function(match) {
+      const escapeMap = {
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        '&': '&amp;'
+      };
+      return escapeMap[match];
+    }).trim();
+  }
+
+  // Security: Validate CSS to prevent malicious code
+  function sanitizeCSS(css) {
+    // Remove dangerous CSS functions and properties
+    const dangerous = [
+      /javascript:/gi,
+      /expression\s*\(/gi,
+      /url\s*\(\s*["']?data:/gi,
+      /@import/gi,
+      /behavior\s*:/gi,
+      /-moz-binding/gi,
+      /vbscript:/gi
+    ];
+
+    let sanitized = css;
+    dangerous.forEach(pattern => {
+      sanitized = sanitized.replace(pattern, '/* removed */');
+    });
+
+    return sanitized;
+  }
+
+  // Security: Validate file types more strictly
+  function isValidImageFile(file) {
+    const allowedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp'];
+    return allowedTypes.includes(file.type) && file.size < 1024 *1024;
+  }
+
+  function isValidCSVFile(file) {
+    return file.type === 'text/csv' && file.size < 10 * 1024 * 1024; // 10MB limit
+  }
+
+  // Original raffle functionality with security improvements
   nameInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      const name = e.target.value.trim();
+      const name = sanitizeInput(e.target.value);
+      if (name.length > MAX_NAME_LENGTH) {
+        showFileMessage("Name is too long (max 100 characters).", "error");
+        return;
+      }
       addParticipant(name);
       e.target.value = "";
     }
@@ -246,8 +509,7 @@
 
   csvFile.addEventListener("change", function (e) {
     const file = e.target.files[0];
-    if (file && file.type === "text/csv") {
-      // Make input section compact and update button
+    if (file && isValidCSVFile(file)) {
       makeInputSectionCompact();
       fileInputLabel.textContent = "✓ CSV Loaded";
       fileInputLabel.classList.add('file-selected');
@@ -257,18 +519,59 @@
         try {
           parseCSV(event.target.result);
         } catch (error) {
-          showFileMessage("Error reading CSV file: " + error.message, "error");
+          showFileMessage("Error reading CSV file: " + sanitizeInput(error.message), "error");
         }
       };
       reader.readAsText(file);
     } else if (file) {
-      showFileMessage("Please select a valid CSV file.", "error");
+      showFileMessage("Please select a valid CSV file (max 10MB).", "error");
+    }
+  });
+
+  // Logo file upload handler with security improvements
+  logoFile.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file && isValidImageFile(file)) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        logoPreview.src = event.target.result;
+        logoPreview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    } else if (file) {
+      showFileMessage("Please select a valid image file (PNG, JPEG, GIF, WebP, max 1MB).", "error");
+      alert("Please select a valid image file (PNG, JPEG, GIF, WebP, max 1MB).");
+    }
+  });
+
+  // Settings import handler with security improvements
+  importSettingsFile.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file && file.type === "application/json" && file.size < 1024 * 1024) { // 1MB limit
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const settings = JSON.parse(event.target.result);
+          applyImportedSettings(settings);
+        } catch (error) {
+          alert("Error importing settings: Invalid JSON file");
+        }
+      };
+      reader.readAsText(file);
+    } else {
+      alert("Please select a valid JSON file (max 1MB).");
     }
   });
 
   function addParticipant(name) {
-    if (name && !participants.includes(name)) {
-      participants.push(name);
+    if (participants.length >= MAX_PARTICIPANTS) {
+      showFileMessage("Maximum number of participants reached (1000).", "error");
+      return false;
+    }
+
+    const sanitizedName = sanitizeInput(name);
+    if (sanitizedName && !participants.includes(sanitizedName)) {
+      participants.push(sanitizedName);
       updateParticipantList();
       return true;
     }
@@ -276,14 +579,13 @@
   }
 
   function parseCSV(csvText) {
-    const lines = csvText.split('\n');
+    const lines = csvText.split('\n').slice(0, MAX_PARTICIPANTS + 1); // Limit lines
     if (lines.length < 2) {
       showFileMessage("CSV file appears to be empty or invalid.", "error");
       return;
     }
 
-    // Parse header to find Name column
-    const header = lines[0].split(',').map(col => col.replace(/"/g, '').trim());
+    const header = lines[0].split(',').map(col => sanitizeInput(col.replace(/"/g, '')));
     const nameIndex = header.findIndex(col => col.toLowerCase() === 'name');
 
     if (nameIndex === -1) {
@@ -294,14 +596,13 @@
     let addedCount = 0;
     let duplicateCount = 0;
 
-    // Parse data rows
-    for (let i = 1; i < lines.length; i++) {
+    for (let i = 1; i < lines.length && participants.length < MAX_PARTICIPANTS; i++) {
       const line = lines[i].trim();
       if (line) {
         const columns = parseCSVLine(line);
         if (columns.length > nameIndex) {
-          const name = columns[nameIndex].replace(/"/g, '').trim();
-          if (name) {
+          const name = sanitizeInput(columns[nameIndex].replace(/"/g, ''));
+          if (name && name.length <= MAX_NAME_LENGTH) {
             if (addParticipant(name)) {
               addedCount++;
             } else {
@@ -358,7 +659,7 @@
   }
 
   function showFileMessage(message, type) {
-    fileMessage.textContent = message;
+    fileMessage.textContent = sanitizeInput(message);
     fileMessage.className = type === "error" ? "error-message" : "success-message";
     setTimeout(() => {
       fileMessage.textContent = "";
@@ -374,7 +675,7 @@
       const tag = document.createElement("div");
       tag.className = "tag";
       tag.setAttribute("role", "listitem");
-      tag.textContent = name;
+      tag.textContent = name; // Already sanitized
 
       const x = document.createElement("span");
       x.textContent = "×";
@@ -430,17 +731,122 @@
         winnerDiv.textContent = `🎉 Winner: ${winner} 🎉`;
         winnerImage.style.display = "block";
 
-        confetti({
-          particleCount: 150,
-          spread: 100,
-          origin: { y: 0.6 }
-        });
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { y: 0.6 }
+          });
+        }
       }
     }, 100);
   }
 
+  // Customization functions with security improvements
+  function toggleCustomizationPanel() {
+    customizationPanel.classList.toggle("open");
+  }
+
+  function updateTitle() {
+    const newTitle = sanitizeInput(titleInput.value);
+    if (newTitle && newTitle.length <= 100) {
+      mainTitle.textContent = newTitle;
+      document.title = newTitle;
+      saveSettings();
+    }
+  }
+
+  function updateLogo() {
+    if (logoPreview.src && logoPreview.style.display !== 'none') {
+      mainLogo.src = logoPreview.src;
+      mainLogo.style.display = 'block';
+      saveSettings();
+    }
+  }
+
+  function updateCSS() {
+    const customCSS = sanitizeCSS(cssInput.value.trim());
+    if (customCSS && customCSS.length <= 10000) {
+      let customStyleElement = document.getElementById('customStyles');
+      if (!customStyleElement) {
+        customStyleElement = document.createElement('style');
+        customStyleElement.id = 'customStyles';
+        document.head.appendChild(customStyleElement);
+      }
+      customStyleElement.textContent = customCSS;
+      saveSettings();
+    }
+  }
+
+  function resetCSS() {
+    const customStyleElement = document.getElementById('customStyles');
+    if (customStyleElement) {
+      customStyleElement.remove();
+    }
+    cssInput.value = '';
+    saveSettings();
+  }
+
+  function saveSettings() {
+    window.currentSettings = {
+      title: mainTitle.textContent,
+      logoSrc: mainLogo.src.startsWith('data:') ? mainLogo.src : '',
+      customCSS: cssInput.value
+    };
+  }
+
+  function exportSettings() {
+    const settings = {
+      title: sanitizeInput(mainTitle.textContent),
+      customCSS: sanitizeCSS(cssInput.value),
+      logoSrc: mainLogo.src.startsWith('data:') ? mainLogo.src : ''
+    };
+
+    const dataStr = JSON.stringify(settings, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = 'raffle-settings.json';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  }
+
+  function importSettingsFromFile() {
+    const file = importSettingsFile.files[0];
+    if (!file) {
+      alert("Please select a settings file to import.");
+    }
+  }
+
+  function applyImportedSettings(settings) {
+    if (settings.title && typeof settings.title === 'string') {
+      titleInput.value = sanitizeInput(settings.title).substring(0, 100);
+      updateTitle();
+    }
+
+    if (settings.customCSS && typeof settings.customCSS === 'string') {
+      cssInput.value = sanitizeCSS(settings.customCSS).substring(0, 10000);
+      updateCSS();
+    }
+
+    if(settings.logoSrc && typeof settings.logoSrc === 'string') {
+      mainLogo.src = settings.logoSrc;
+      mainLogo.style.display = 'block';
+    }
+
+    alert("Settings imported successfully!");
+  }
+
   // Initialize
   updateParticipantList();
+
+  // Load saved settings if available
+  if (window.currentSettings) {
+    const settings = window.currentSettings;
+    if (settings.title) titleInput.value = sanitizeInput(settings.title);
+    if (settings.customCSS) cssInput.value = sanitizeCSS(settings.customCSS);
+  }
 </script>
 </body>
 </html>
