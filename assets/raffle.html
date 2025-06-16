@@ -450,7 +450,7 @@ button { border-radius: 25px; }
   // Security: Input sanitization function
   function sanitizeInput(input) {
     if (typeof input !== 'string') return '';
-    return input.replace(/[<>\"'&]/g, function(match) {
+    return input.replace(/[<>"'&]/g, function(match) {
       const escapeMap = {
         '<': '&lt;',
         '>': '&gt;',
@@ -486,7 +486,7 @@ button { border-radius: 25px; }
   // Security: Validate file types more strictly
   function isValidImageFile(file) {
     const allowedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp'];
-    return allowedTypes.includes(file.type) && file.size < 5 * 1024 * 1024; // 5MB limit
+    return allowedTypes.includes(file.type) && file.size < 1024 *1024;
   }
 
   function isValidCSVFile(file) {
@@ -539,7 +539,8 @@ button { border-radius: 25px; }
       };
       reader.readAsDataURL(file);
     } else if (file) {
-      showFileMessage("Please select a valid image file (PNG, JPEG, GIF, WebP, max 5MB).", "error");
+      showFileMessage("Please select a valid image file (PNG, JPEG, GIF, WebP, max 1MB).", "error");
+      alert("Please select a valid image file (PNG, JPEG, GIF, WebP, max 1MB).");
     }
   });
 
@@ -787,18 +788,18 @@ button { border-radius: 25px; }
   }
 
   function saveSettings() {
-    const settings = {
+    window.currentSettings = {
       title: mainTitle.textContent,
       logoSrc: mainLogo.src.startsWith('data:') ? mainLogo.src : '',
       customCSS: cssInput.value
     };
-    window.currentSettings = settings;
   }
 
   function exportSettings() {
     const settings = {
       title: sanitizeInput(mainTitle.textContent),
-      customCSS: sanitizeCSS(cssInput.value)
+      customCSS: sanitizeCSS(cssInput.value),
+      logoSrc: mainLogo.src.startsWith('data:') ? mainLogo.src : ''
     };
 
     const dataStr = JSON.stringify(settings, null, 2);
@@ -815,7 +816,6 @@ button { border-radius: 25px; }
     const file = importSettingsFile.files[0];
     if (!file) {
       alert("Please select a settings file to import.");
-      return;
     }
   }
 
@@ -828,6 +828,11 @@ button { border-radius: 25px; }
     if (settings.customCSS && typeof settings.customCSS === 'string') {
       cssInput.value = sanitizeCSS(settings.customCSS).substring(0, 10000);
       updateCSS();
+    }
+
+    if(settings.logoSrc && typeof settings.logoSrc === 'string') {
+      mainLogo.src = settings.logoSrc;
+      mainLogo.style.display = 'block';
     }
 
     alert("Settings imported successfully!");
