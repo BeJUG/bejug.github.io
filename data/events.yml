@@ -11,15 +11,38 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20250912-bejug
+  eventName: "Creating AI-infused (Agentic) Apps, the Easy Way 🤙 + Java for Kotlin developers"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/310395900/
+  location: IBA, Louvain-la-Neuve
+  date: 2025-09-12
+  talks:
+    - title: "Creating AI-infused (Agentic) Apps, the Easy Way 🤙"
+      presenters: Kevin Dubois
+    - title: "Java for Kotlin developers"
+      presenters: Tim Schraepen
+
+- eventId: 20250828-bejug
+  eventName: "Breaching LLM Powered Applications + Lessons from the Oregon Trail"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/310395900/
+  location: Cegeka, Hasselt
+  date: 2025-08-28
+  talks:
+    - title: "Breaching LLM Powered Applications"
+      presenters: Brian Vermeer
+    - title: "Lessons from the Oregon Trail for the Secure Software Supply Chain"
+      presenters: Kadi McKean
+
 - eventId: 20250619-bejug
-  eventName: "IntelliJ as a game engine + 1 more"
+  eventName: "IntelliJ as a game engine + Wrapping up the Spring Boot 3.x generation"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/308208478/
   location: Oniryx, Gembloux
   date: 2025-06-19
   talks:
     - title: "IntelliJ as a game engine"
       presenters: Alexander Chatzizacharias
-    - title: "Could be you!"
+    - title: "Wrapping up the Spring Boot 3.x generation"
+      presenters: Stéphane Nicol
 
 
 - eventId: 20250523-bejug
