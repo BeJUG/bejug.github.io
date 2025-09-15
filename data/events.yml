@@ -11,6 +11,14 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20251009-bejug
+  eventName: "Java and JVM lovers in Belgium, let's unite! - BoF @ Devoxx"
+  eventUrl: https://m.devoxx.com/events/dvbe25/talks/20670/java-and-jvm-lovers-in-belgium-lets-unite
+  location: Devoxx Belgium, Antwerp
+  date: 2025-10-09
+  talks:
+    - title: "Java and JVM lovers in Belgium, let's unite! - BoF @ Devoxx"
+      presenters: Loïc Magnette, Tom Cools, Frank Delporte
 - eventId: 20250912-bejug
   eventName: "Creating AI-infused (Agentic) Apps, the Easy Way 🤙 + Java for Kotlin developers"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/310395900/
