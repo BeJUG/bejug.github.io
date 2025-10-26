@@ -11,6 +11,16 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20251118-bejug
+  eventName: "From Fragile to Fearless: Writing Tests That Last"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/311657239/
+  location: Inetum Gent
+  date: 2025-11-18
+  talks:
+    - title: "From Fragile to Fearless: Writing Tests That Last"
+      presenters: Wouter Bauweraerts
+    - title: "The Wait is Over: Foreign Function & Memory (FFM) API brings modern Java to the Raspberry Pi"
+      presenters: Frank Delporte
 - eventId: 20251009-bejug
   eventName: "Java and JVM lovers in Belgium, let's unite! - BoF @ Devoxx"
   eventUrl: https://m.devoxx.com/events/dvbe25/talks/20670/java-and-jvm-lovers-in-belgium-lets-unite
