@@ -27,6 +27,7 @@
                 <a class="m-1" style="color: #6364ff" href="https://foojay.social/@BeJUG" target="_blank" role="button"><i class="fa-brands fa-mastodon"></i></a>
                 <a class="m-1" style="color: #0077b5" href="https://www.linkedin.com/groups/155664/" target="_blank" role="button"><i class="fa-brands fa-linkedin"></i></a>
                 <a class="m-1" style="color: #333" href="https://github.com/bejug" target="_blank" role="button"><i class="fa-brands fa-github"></i></a>
+                <a class="m-1" style="color: #D63B63" href="https://www.meetup.com/belgian-java-user-group/" role="button"><i class="fa-brands fa-meetup"></i></a>
             </div>
         </div>
     </@parent.layout>
