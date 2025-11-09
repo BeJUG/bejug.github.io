@@ -6,7 +6,7 @@
 
 The BeJUG is always looking for more partners that want to host one of our meetups.
 This document describes what we are looking for.
-We would love it if you drop us a message, either as a direct message https://www.meetup.com/belgian-java-user-group/[on Meetup.com] or though mail via <belgian (dot) jug (a) gmail (dot) com> if you are interested in hosting.
+We would love it if you drop us a message, either as a direct message https://www.meetup.com/belgian-java-user-group/[on Meetup.com] or though mail via mailto:belgian.jug@gmail.com[belgian.jug@gmail.com] if you are interested in hosting.
 
 == What is the (BeJUG) ?
 
