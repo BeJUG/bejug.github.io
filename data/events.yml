@@ -11,6 +11,11 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20251217-bejug
+  eventName: "[ONLINE] Community Participation Call"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/312391067/
+  location: Online
+  date: 2025-12-17
 - eventId: 20251118-bejug
   eventName: "From Fragile to Fearless: Writing Tests That Last"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/311657239/
