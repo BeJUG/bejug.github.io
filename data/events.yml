@@ -11,6 +11,14 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20260121-bejug
+  eventName: "Build an AI-Infused Chat Bot with LangChain4j"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/312620099/
+  location: Sweet Mustard Kortrijk
+  date: 2025-01-21
+  talks:
+    - title: "From Fragile to Fearless: Writing Tests That Last"
+      presenters: Antonio Goncalves
 - eventId: 20251217-bejug
   eventName: "[ONLINE] Community Participation Call"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/312391067/
