@@ -11,6 +11,16 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20260218-bejug
+  eventName: "Green AI with JobRunr & Finding the Spark"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/
+  location: Leuven
+  date: 2026-02-18
+  talks:
+    - title: "Green AI with JobRunr: Sustainable training and inference on the JVM"
+      presenters: Ronald Dehuysser
+    - title: "Finding the Spark: A Career Reset Button"
+      presenters: Loïc Magnette
 - eventId: 20260121-bejug
   eventName: "Build an AI-Infused Chat Bot with LangChain4j"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/312620099/
