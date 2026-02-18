@@ -16,6 +16,7 @@ assignees: TomCools
 - [ ] Determine date
 - [ ] Announce event on Meetup.com
 - [ ] Promote on social media
+- [ ] Add event to website
 
 ### After the event
 

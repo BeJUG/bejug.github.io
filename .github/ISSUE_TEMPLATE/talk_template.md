@@ -2,7 +2,7 @@
 name: Talk Template
 about: Template used to submit a talk.
 title: "[Talk] -title-here-"
-labels: talk
+labels: ''
 assignees: TomCools
 
 ---
