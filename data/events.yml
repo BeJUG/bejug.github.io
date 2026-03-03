@@ -11,6 +11,18 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20260324-bejug
+  eventName: "BeJUG x Brussels JUG – JVM Diagnostics, AI-Native Dev & Fraud Detection"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/313562655/
+  location: Brussels
+  date: 2026-03-24
+  talks:
+    - title: "Fraud detection on card transactions: Supervised learning with extreme imbalanced data using Python"
+      presenters: Franck Benault
+    - title: "Vibe Coding a Home Server on the Raspberry Pi: What AI-Native Development Actually Looks Like"
+      presenters: Wim De Troyer
+    - title: "Finding Java Memory Leaks with Heap Dumps (JDK 25)"
+      presenters: Badr Kacimi
 - eventId: 20260218-bejug
   eventName: "Green AI with JobRunr & Finding the Spark"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/
