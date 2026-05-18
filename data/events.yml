@@ -11,6 +11,16 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20260528-bejug
+  eventName: "Event Sourcing and JCast!"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/314638750/
+  location: Gent
+  date: 2026-05-28
+  talks:
+    - title: "Event Sourcing: dealing with an eventful past"
+      presenters: Hannes Lowette
+    - title: "When the Spark Shows Up, Don’t Ignore It"
+      presenters: Maarten Casteels
 - eventId: 20260324-bejug
   eventName: "BeJUG x Brussels JUG – JVM Diagnostics, AI-Native Dev & Fraud Detection"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/313562655/
