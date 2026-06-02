@@ -11,6 +11,16 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20260609-bejug
+  eventName: "From End of DDD Tactical Patterns to using Spring Boot to build games"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/314996280/
+  location: Oniryx, Gembloux
+  date: 2026-06-09
+  talks:
+    - title: "Event Sourcing and the End of DDD Tactical Patterns?"
+      presenters: Ted M. Young
+    - title: "Let's use Spring Boot to build games, because why not?"
+      presenters: Alexander Chatzizacharias
 - eventId: 20260527-bejug
   eventName: "Event Sourcing and JCast!"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/314638750/
