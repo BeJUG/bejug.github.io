@@ -11,6 +11,31 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20261021-bejug
+  eventName: "Breaking changes, there's a test for that! & Black Cats"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/316783992/
+  location: Leuven
+  date: 2026-10-21
+  talks:
+    - title: "Adopt a Black Cat: Rehabilitating Unloved Technologies"
+      presenters: Tom Cools
+    - title: "Data Batch Processing With Open-Source Solutions: Apache NiFi vs Spring Batch"
+      presenters: Eddie Cho
+    - title: "Breaking changes, there's a test for that!"
+      presenters: Peter De Coninck
+- eventId: 20261013-bejug
+  eventName: "Patterns and Anti-Patterns of Agentic Engineering with Victor Rentea"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/316884744/
+  location: Brussels
+  date: 2026-10-13
+  talks:
+    - title: "Patterns and Anti-Patterns of Agentic Engineering"
+      presenters: Victor Rentea
+- eventId: 20260924-bejug
+  eventName: "Architecture for the Agentic Era and Make Cybersecurity Fun"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/316368818/
+  location: we+, Hasselt
+  date: 2026-09-24
 - eventId: 20260609-bejug
   eventName: "From End of DDD Tactical Patterns to using Spring Boot to build games"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/314996280/
@@ -21,6 +46,11 @@
       presenters: Ted M. Young
     - title: "Let's use Spring Boot to build games, because why not?"
       presenters: Alexander Chatzizacharias
+- eventId: 20260605-bejug
+  eventName: "INFORMAL - Evening with Bruno Javaman Souza"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/315034836/
+  location: Antwerp
+  date: 2026-06-05
 - eventId: 20260527-bejug
   eventName: "Event Sourcing and JCast!"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/314638750/
@@ -45,7 +75,7 @@
       presenters: Badr Kacimi
 - eventId: 20260218-bejug
   eventName: "Green AI with JobRunr & Finding the Spark"
-  eventUrl: https://www.meetup.com/belgian-java-user-group/events/
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/312903814/
   location: Leuven
   date: 2026-02-18
   talks:
