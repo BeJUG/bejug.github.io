@@ -11,6 +11,11 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20261027-bejug
+  eventName: "Open Space with Kotlin User Group"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/317062424/
+  location: Zaventem
+  date: 2026-10-27
 - eventId: 20261021-bejug
   eventName: "Breaking changes, there's a test for that! & Black Cats"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/316783992/

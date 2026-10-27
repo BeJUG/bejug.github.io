@@ -10,7 +10,7 @@
     uri="">
         <div class="text-center">
             <div>
-                <img src="${content.rootpath}logo.png" alt="Logo" width="30%">
+                <img src="${content.rootpath}bejug-logo-with-banner.png" alt="BeJUG logo" width="60%">
             </div>
             <h1>The Belgian Java User Group</h1>
             <@macros.latestEvents/>
