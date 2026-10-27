@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # Daily rebuild so the "Upcoming events" list drops past events and shows today's
+    - cron: '5 0 * * *'
 
 jobs:
   build-deploy:

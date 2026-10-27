@@ -8,7 +8,8 @@
         <div class="card-body">
             <ul class="list-unstyled">
                 <#list events?reverse as event>
-                    <#if .now?date <= event.date?date>
+                    <#-- Event date is midnight GMT; keep it visible during the whole day -->
+                    <#if (event.date?long + 86400000) gt .now?long>
                         <li class="mb-2">
                             <div class="title">
                                 <#if event.eventUrl??>
