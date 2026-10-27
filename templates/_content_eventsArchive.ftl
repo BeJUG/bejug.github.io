@@ -13,9 +13,9 @@
                 <div class="title">
                     <#if event.eventUrl??>
                         <#if event.participationOnly??>
-                            <a data-toggle="tooltip" title="This event is not hosted by us, but we do promote the event." class="link-secondary" href="${event.eventUrl}">${event.eventName}</a>
+                            <a data-toggle="tooltip" title="This event is not hosted by us, but we do promote the event." class="link-secondary" href="${event.eventUrl}" target="_blank" rel="noopener">${event.eventName}</a>
                         <#else>
-                            <a class="link-primary" href="${event.eventUrl}">${event.eventName}</a>
+                            <a class="link-primary" href="${event.eventUrl}" target="_blank" rel="noopener">${event.eventName}</a>
                         </#if>
                     <#else>
                         ${event.eventName}

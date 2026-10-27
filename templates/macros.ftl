@@ -13,7 +13,7 @@
                         <li class="mb-2">
                             <div class="title">
                                 <#if event.eventUrl??>
-                                    <a href="${event.eventUrl}">${event.eventName}</a>
+                                    <a href="${event.eventUrl}" target="_blank" rel="noopener">${event.eventName}</a>
                                 <#else>
                                     ${event.eventName}
                                 </#if>
