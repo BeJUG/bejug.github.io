@@ -11,6 +11,16 @@
 #      presenters: (optional) Comma separated list of presenters.
 #
 # Order events by date descending
+- eventId: 20261118-bejug
+  eventName: "Deterministic Java refactoring at scale + Snake in 10 lines"
+  eventUrl: https://www.meetup.com/belgian-java-user-group/events/317149858/
+  location: Kontich
+  date: 2026-11-18
+  talks:
+    - title: "Deterministic Java refactoring at scale"
+      presenters: Piet van Remortel, Bart Naudts, Guus de Wit
+    - title: "Snake in 10 lines"
+      presenters: Guus de Wit
 - eventId: 20261027-bejug
   eventName: "Open Space with Kotlin User Group"
   eventUrl: https://www.meetup.com/belgian-java-user-group/events/317062424/
