@@ -66,697 +66,1111 @@
     </nav>
 
     <div class="container py-4">
+    <style>
+        .archive-year {
+            border-bottom: 2px solid var(--bs-primary);
+            padding-bottom: .25rem;
+            margin: 2rem 0 1rem;
+        }
+        .archive-event {
+            display: flex;
+            gap: 1rem;
+            padding: .75rem 0;
+            border-bottom: 1px solid var(--bs-border-color);
+        }
+        .archive-date {
+            flex: 0 0 3.5rem;
+            text-align: center;
+            line-height: 1.1;
+            background: var(--bs-light);
+            border: 1px solid var(--bs-border-color);
+            border-radius: .5rem;
+            padding: .4rem 0;
+            align-self: flex-start;
+        }
+        .archive-date .day {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .archive-date .month {
+            display: block;
+            font-size: .75rem;
+            text-transform: uppercase;
+            color: var(--bs-secondary-color);
+        }
+        .archive-meta {
+            color: var(--bs-secondary-color);
+            font-size: .9rem;
+        }
+        .archive-talks {
+            margin: .5rem 0 0;
+            padding-left: 1rem;
+            font-size: .9rem;
+        }
+    </style>
     <h1>Events archive</h1>
-    <ul class="list-unstyled">
-            <li class="mb-2">
-                <div class="title">
+            <h2 class="archive-year h4">2026</h2>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">18</span>
+                <span class="month">Nov</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/317149858/" target="_blank" rel="noopener">Deterministic Java refactoring at scale + Snake in 10 lines</a>
+                    <span class="badge text-bg-success ms-1">Upcoming</span>
+                    
                 </div>
-                <span>
-                    Kontich - Wed 18 November 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Deterministic Java refactoring at scale
-                                        <span class="small">by Piet van Remortel, Bart Naudts, Guus de Wit</span>
-                                </li>
-                                <li class="ms-4">
-                                    Snake in 10 lines
-                                        <span class="small">by Guus de Wit</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Kontich &middot; Wednesday 18 November 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Deterministic Java refactoring at scale
+                                    <span class="small text-muted">by Piet van Remortel, Bart Naudts, Guus de Wit</span>
+                            </li>
+                            <li>
+                                Snake in 10 lines
+                                    <span class="small text-muted">by Guus de Wit</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">27</span>
+                <span class="month">Oct</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/317062424/" target="_blank" rel="noopener">Open Space with Kotlin User Group</a>
+                    
+                    
                 </div>
-                <span>
-                    Zaventem - Tue 27 October 2026
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Zaventem &middot; Tuesday 27 October 2026
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">21</span>
+                <span class="month">Oct</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/316783992/" target="_blank" rel="noopener">Breaking changes, there's a test for that! & Black Cats</a>
+                    
+                    
                 </div>
-                <span>
-                    Leuven - Wed 21 October 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Adopt a Black Cat: Rehabilitating Unloved Technologies
-                                        <span class="small">by Tom Cools</span>
-                                </li>
-                                <li class="ms-4">
-                                    Data Batch Processing With Open-Source Solutions: Apache NiFi vs Spring Batch
-                                        <span class="small">by Eddie Cho</span>
-                                </li>
-                                <li class="ms-4">
-                                    Breaking changes, there's a test for that!
-                                        <span class="small">by Peter De Coninck</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Leuven &middot; Wednesday 21 October 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Adopt a Black Cat: Rehabilitating Unloved Technologies
+                                    <span class="small text-muted">by Tom Cools</span>
+                            </li>
+                            <li>
+                                Data Batch Processing With Open-Source Solutions: Apache NiFi vs Spring Batch
+                                    <span class="small text-muted">by Eddie Cho</span>
+                            </li>
+                            <li>
+                                Breaking changes, there's a test for that!
+                                    <span class="small text-muted">by Peter De Coninck</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">13</span>
+                <span class="month">Oct</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/316884744/" target="_blank" rel="noopener">Patterns and Anti-Patterns of Agentic Engineering with Victor Rentea</a>
+                    
+                    
                 </div>
-                <span>
-                    Brussels - Tue 13 October 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Patterns and Anti-Patterns of Agentic Engineering
-                                        <span class="small">by Victor Rentea</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Brussels &middot; Tuesday 13 October 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Patterns and Anti-Patterns of Agentic Engineering
+                                    <span class="small text-muted">by Victor Rentea</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">24</span>
+                <span class="month">Sep</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/316368818/" target="_blank" rel="noopener">Architecture for the Agentic Era and Make Cybersecurity Fun</a>
+                    
+                    
                 </div>
-                <span>
-                    we+, Hasselt - Thu 24 September 2026
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> we+, Hasselt &middot; Thursday 24 September 2026
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">9</span>
+                <span class="month">Jun</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/314996280/" target="_blank" rel="noopener">From End of DDD Tactical Patterns to using Spring Boot to build games</a>
+                    
+                    
                 </div>
-                <span>
-                    Oniryx, Gembloux - Tue 9 June 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Event Sourcing and the End of DDD Tactical Patterns?
-                                        <span class="small">by Ted M. Young</span>
-                                </li>
-                                <li class="ms-4">
-                                    Let's use Spring Boot to build games, because why not?
-                                        <span class="small">by Alexander Chatzizacharias</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Oniryx, Gembloux &middot; Tuesday 9 June 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Event Sourcing and the End of DDD Tactical Patterns?
+                                    <span class="small text-muted">by Ted M. Young</span>
+                            </li>
+                            <li>
+                                Let's use Spring Boot to build games, because why not?
+                                    <span class="small text-muted">by Alexander Chatzizacharias</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">5</span>
+                <span class="month">Jun</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/315034836/" target="_blank" rel="noopener">INFORMAL - Evening with Bruno Javaman Souza</a>
+                    
+                    
                 </div>
-                <span>
-                    Antwerp - Fri 5 June 2026
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Antwerp &middot; Friday 5 June 2026
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">27</span>
+                <span class="month">May</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/314638750/" target="_blank" rel="noopener">Event Sourcing and JCast!</a>
+                    
+                    
                 </div>
-                <span>
-                    Gent - Wed 27 May 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Event Sourcing: dealing with an eventful past
-                                        <span class="small">by Hannes Lowette</span>
-                                </li>
-                                <li class="ms-4">
-                                    When the Spark Shows Up, Don’t Ignore It
-                                        <span class="small">by Maarten Casteels</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Gent &middot; Wednesday 27 May 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Event Sourcing: dealing with an eventful past
+                                    <span class="small text-muted">by Hannes Lowette</span>
+                            </li>
+                            <li>
+                                When the Spark Shows Up, Don’t Ignore It
+                                    <span class="small text-muted">by Maarten Casteels</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">24</span>
+                <span class="month">Mar</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/313562655/" target="_blank" rel="noopener">BeJUG x Brussels JUG – JVM Diagnostics, AI-Native Dev & Fraud Detection</a>
+                    
+                    
                 </div>
-                <span>
-                    Brussels - Tue 24 March 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Fraud detection on card transactions: Supervised learning with extreme imbalanced data using Python
-                                        <span class="small">by Franck Benault</span>
-                                </li>
-                                <li class="ms-4">
-                                    Vibe Coding a Home Server on the Raspberry Pi: What AI-Native Development Actually Looks Like
-                                        <span class="small">by Wim De Troyer</span>
-                                </li>
-                                <li class="ms-4">
-                                    Finding Java Memory Leaks with Heap Dumps (JDK 25)
-                                        <span class="small">by Badr Kacimi</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Brussels &middot; Tuesday 24 March 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Fraud detection on card transactions: Supervised learning with extreme imbalanced data using Python
+                                    <span class="small text-muted">by Franck Benault</span>
+                            </li>
+                            <li>
+                                Vibe Coding a Home Server on the Raspberry Pi: What AI-Native Development Actually Looks Like
+                                    <span class="small text-muted">by Wim De Troyer</span>
+                            </li>
+                            <li>
+                                Finding Java Memory Leaks with Heap Dumps (JDK 25)
+                                    <span class="small text-muted">by Badr Kacimi</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">18</span>
+                <span class="month">Feb</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/312903814/" target="_blank" rel="noopener">Green AI with JobRunr & Finding the Spark</a>
+                    
+                    
                 </div>
-                <span>
-                    Leuven - Wed 18 February 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Green AI with JobRunr: Sustainable training and inference on the JVM
-                                        <span class="small">by Ronald Dehuysser</span>
-                                </li>
-                                <li class="ms-4">
-                                    Finding the Spark: A Career Reset Button
-                                        <span class="small">by Loïc Magnette</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Leuven &middot; Wednesday 18 February 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Green AI with JobRunr: Sustainable training and inference on the JVM
+                                    <span class="small text-muted">by Ronald Dehuysser</span>
+                            </li>
+                            <li>
+                                Finding the Spark: A Career Reset Button
+                                    <span class="small text-muted">by Loïc Magnette</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">21</span>
+                <span class="month">Jan</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/312620099/" target="_blank" rel="noopener">Build an AI-Infused Chat Bot with LangChain4j</a>
+                    
+                    
                 </div>
-                <span>
-                    Sweet Mustard Kortrijk - Wed 21 January 2026
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    From Fragile to Fearless: Writing Tests That Last
-                                        <span class="small">by Antonio Goncalves</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Sweet Mustard Kortrijk &middot; Wednesday 21 January 2026
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                From Fragile to Fearless: Writing Tests That Last
+                                    <span class="small text-muted">by Antonio Goncalves</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+            <h2 class="archive-year h4">2025</h2>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">17</span>
+                <span class="month">Dec</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/312391067/" target="_blank" rel="noopener">[ONLINE] Community Participation Call</a>
+                    
+                    
                 </div>
-                <span>
-                    Online - Wed 17 December 2025
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Online &middot; Wednesday 17 December 2025
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">18</span>
+                <span class="month">Nov</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/311657239/" target="_blank" rel="noopener">From Fragile to Fearless: Writing Tests That Last</a>
+                    
+                    
                 </div>
-                <span>
-                    Inetum Gent - Tue 18 November 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    From Fragile to Fearless: Writing Tests That Last
-                                        <span class="small">by Wouter Bauweraerts</span>
-                                </li>
-                                <li class="ms-4">
-                                    The Wait is Over: Foreign Function & Memory (FFM) API brings modern Java to the Raspberry Pi
-                                        <span class="small">by Frank Delporte</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Inetum Gent &middot; Tuesday 18 November 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                From Fragile to Fearless: Writing Tests That Last
+                                    <span class="small text-muted">by Wouter Bauweraerts</span>
+                            </li>
+                            <li>
+                                The Wait is Over: Foreign Function & Memory (FFM) API brings modern Java to the Raspberry Pi
+                                    <span class="small text-muted">by Frank Delporte</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">9</span>
+                <span class="month">Oct</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://m.devoxx.com/events/dvbe25/talks/20670/java-and-jvm-lovers-in-belgium-lets-unite" target="_blank" rel="noopener">Java and JVM lovers in Belgium, let's unite! - BoF @ Devoxx</a>
+                    
+                    
                 </div>
-                <span>
-                    Devoxx Belgium, Antwerp - Thu 9 October 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Java and JVM lovers in Belgium, let's unite! - BoF @ Devoxx
-                                        <span class="small">by Loïc Magnette, Tom Cools, Frank Delporte</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Devoxx Belgium, Antwerp &middot; Thursday 9 October 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Java and JVM lovers in Belgium, let's unite! - BoF @ Devoxx
+                                    <span class="small text-muted">by Loïc Magnette, Tom Cools, Frank Delporte</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">12</span>
+                <span class="month">Sep</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/310395900/" target="_blank" rel="noopener">Creating AI-infused (Agentic) Apps, the Easy Way 🤙 + Java for Kotlin developers</a>
+                    
+                    
                 </div>
-                <span>
-                    IBA, Louvain-la-Neuve - Fri 12 September 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Creating AI-infused (Agentic) Apps, the Easy Way 🤙
-                                        <span class="small">by Kevin Dubois</span>
-                                </li>
-                                <li class="ms-4">
-                                    Java for Kotlin developers
-                                        <span class="small">by Tim Schraepen</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> IBA, Louvain-la-Neuve &middot; Friday 12 September 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Creating AI-infused (Agentic) Apps, the Easy Way 🤙
+                                    <span class="small text-muted">by Kevin Dubois</span>
+                            </li>
+                            <li>
+                                Java for Kotlin developers
+                                    <span class="small text-muted">by Tim Schraepen</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">28</span>
+                <span class="month">Aug</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/310395900/" target="_blank" rel="noopener">Breaching LLM Powered Applications + Lessons from the Oregon Trail</a>
+                    
+                    
                 </div>
-                <span>
-                    Cegeka, Hasselt - Thu 28 August 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Breaching LLM Powered Applications
-                                        <span class="small">by Brian Vermeer</span>
-                                </li>
-                                <li class="ms-4">
-                                    Lessons from the Oregon Trail for the Secure Software Supply Chain
-                                        <span class="small">by Kadi McKean</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Cegeka, Hasselt &middot; Thursday 28 August 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Breaching LLM Powered Applications
+                                    <span class="small text-muted">by Brian Vermeer</span>
+                            </li>
+                            <li>
+                                Lessons from the Oregon Trail for the Secure Software Supply Chain
+                                    <span class="small text-muted">by Kadi McKean</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">19</span>
+                <span class="month">Jun</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/308208478/" target="_blank" rel="noopener">IntelliJ as a game engine + Wrapping up the Spring Boot 3.x generation</a>
+                    
+                    
                 </div>
-                <span>
-                    Oniryx, Gembloux - Thu 19 June 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    IntelliJ as a game engine
-                                        <span class="small">by Alexander Chatzizacharias</span>
-                                </li>
-                                <li class="ms-4">
-                                    Wrapping up the Spring Boot 3.x generation
-                                        <span class="small">by Stéphane Nicol</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Oniryx, Gembloux &middot; Thursday 19 June 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                IntelliJ as a game engine
+                                    <span class="small text-muted">by Alexander Chatzizacharias</span>
+                            </li>
+                            <li>
+                                Wrapping up the Spring Boot 3.x generation
+                                    <span class="small text-muted">by Stéphane Nicol</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">23</span>
+                <span class="month">May</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/307909476/" target="_blank" rel="noopener">INFORMAL - 30 Years of Java @ Bier Central (Antwerp)</a>
+                    
+                    
                 </div>
-                <span>
-                    Bier Central, Antwerpen - Fri 23 May 2025
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Bier Central, Antwerpen &middot; Friday 23 May 2025
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">6</span>
+                <span class="month">May</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/307065349/" target="_blank" rel="noopener">Event Driven in the Wild with Kafka</a>
+                    
+                    
                 </div>
-                <span>
-                    Randstad Digital, Leuven - Tue 6 May 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Event Driven in the Wild with Kafka
-                                        <span class="small">by Jonas Geiregat</span>
-                                </li>
-                                <li class="ms-4">
-                                    Scared of the ExecutorService? Try JobRunr Jobs instead!
-                                        <span class="small">by Wouter Groeneveld</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Randstad Digital, Leuven &middot; Tuesday 6 May 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Event Driven in the Wild with Kafka
+                                    <span class="small text-muted">by Jonas Geiregat</span>
+                            </li>
+                            <li>
+                                Scared of the ExecutorService? Try JobRunr Jobs instead!
+                                    <span class="small text-muted">by Wouter Groeneveld</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">24</span>
+                <span class="month">Apr</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/307065349/" target="_blank" rel="noopener">All you need to know about Maven 4</a>
+                    
+                    
                 </div>
-                <span>
-                    NSI, Awans - Thu 24 April 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    All you need to know about Maven 4
-                                        <span class="small">by Matthias Bünger</span>
-                                </li>
-                                <li class="ms-4">
-                                    Revisiting the visitor pattern using Data-Oriented Programming techniques.
-                                        <span class="small">by Wim De Troyer</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> NSI, Awans &middot; Thursday 24 April 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                All you need to know about Maven 4
+                                    <span class="small text-muted">by Matthias Bünger</span>
+                            </li>
+                            <li>
+                                Revisiting the visitor pattern using Data-Oriented Programming techniques.
+                                    <span class="small text-muted">by Wim De Troyer</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">26</span>
+                <span class="month">Feb</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/305958065" target="_blank" rel="noopener">AI Powered Applications in Java & Deploying with Confidence - Andres Almiray</a>
+                    
+                    
                 </div>
-                <span>
-                    J-Crafters, Kontich - Wed 26 February 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    AI Powered Applications in Java & Deploying with Confidence
-                                        <span class="small">by Andres Almiray</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> J-Crafters, Kontich &middot; Wednesday 26 February 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                AI Powered Applications in Java & Deploying with Confidence
+                                    <span class="small text-muted">by Andres Almiray</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">3</span>
+                <span class="month">Feb</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/305632961" target="_blank" rel="noopener">Introduction to OpenTelemetry and Tulips to Turmeric</a>
+                    
+                    
                 </div>
-                <span>
-                    AE, Leuven - Mon 3 February 2025
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Practical introduction to OpenTelemetry tracing
-                                        <span class="small">by Nicolas Fränkel</span>
-                                </li>
-                                <li class="ms-4">
-                                    Tulips to Turmeric: Lessons Learned from a Global Team
-                                        <span class="small">by Rijo Sam</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> AE, Leuven &middot; Monday 3 February 2025
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Practical introduction to OpenTelemetry tracing
+                                    <span class="small text-muted">by Nicolas Fränkel</span>
+                            </li>
+                            <li>
+                                Tulips to Turmeric: Lessons Learned from a Global Team
+                                    <span class="small text-muted">by Rijo Sam</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+            <h2 class="archive-year h4">2024</h2>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">2</span>
+                <span class="month">Dec</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/304395041/" target="_blank" rel="noopener">"Java Evolutions" with Badr Kacimi and Simon Ritter</a>
+                    
+                    
                 </div>
-                <span>
-                    Colruyt Group, Zwijnaarde - Mon 2 December 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Java Evolutions
-                                        <span class="small">by Simon Ritter</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Colruyt Group, Zwijnaarde &middot; Monday 2 December 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Java Evolutions
+                                    <span class="small text-muted">by Simon Ritter</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">5</span>
+                <span class="month">Nov</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/304091973" target="_blank" rel="noopener">"Know your Java" with Dr. Venkat Subramaniam</a>
+                    
+                    
                 </div>
-                <span>
-                    HE2B - ESI - Ecole Supérieure d'Informatique, Brussels - Tue 5 November 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Know your Java
-                                        <span class="small">by Venkat Subramaniam</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> HE2B - ESI - Ecole Supérieure d'Informatique, Brussels &middot; Tuesday 5 November 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Know your Java
+                                    <span class="small text-muted">by Venkat Subramaniam</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">24</span>
+                <span class="month">Oct</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/303888738" target="_blank" rel="noopener">Open Rewrite: A la carte</a>
+                    
+                    
                 </div>
-                <span>
-                    Sopra Steria, Grimbergen - Thu 24 October 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Open Rewrite: A la carte
-                                        <span class="small">by Tim te Beek</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Sopra Steria, Grimbergen &middot; Thursday 24 October 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Open Rewrite: A la carte
+                                    <span class="small text-muted">by Tim te Beek</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">26</span>
+                <span class="month">Sep</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/303217368" target="_blank" rel="noopener">Testing done right + Maven Marvels</a>
+                    
+                    
                 </div>
-                <span>
-                    Burgerij Eilandje - Axxes, Antwerp - Thu 26 September 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Testing done right: From bugs to brilliance
-                                        <span class="small">by Wouter Bauweraerts</span>
-                                </li>
-                                <li class="ms-4">
-                                    Maven Marvels: Project Generation at Warp Speed
-                                        <span class="small">by Giovanni van der Schelde</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Burgerij Eilandje - Axxes, Antwerp &middot; Thursday 26 September 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Testing done right: From bugs to brilliance
+                                    <span class="small text-muted">by Wouter Bauweraerts</span>
+                            </li>
+                            <li>
+                                Maven Marvels: Project Generation at Warp Speed
+                                    <span class="small text-muted">by Giovanni van der Schelde</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">27</span>
+                <span class="month">Jun</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/301849208" target="_blank" rel="noopener">[ONLINE] Community Participation Call</a>
+                    
+                    
                 </div>
-                <span>
-                    Online - Thu 27 June 2024
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Online &middot; Thursday 27 June 2024
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">24</span>
+                <span class="month">Jun</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/301217259" target="_blank" rel="noopener">Pair Programming with GitHub Copilot + Lessons learned from #JavaOnRaspberryPi</a>
+                    
+                    
                 </div>
-                <span>
-                    TVH, Waregem - Mon 24 June 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    The Future of Pair Programming with GitHub Copilot
-                                        <span class="small">by Nick Bauters</span>
-                                </li>
-                                <li class="ms-4">
-                                    Lessons Learned from #JavaOnRaspberryPi, the Potential of Bits and Bytes, Cost and Eco-Efficiency
-                                        <span class="small">by Frank Delporte</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> TVH, Waregem &middot; Monday 24 June 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                The Future of Pair Programming with GitHub Copilot
+                                    <span class="small text-muted">by Nick Bauters</span>
+                            </li>
+                            <li>
+                                Lessons Learned from #JavaOnRaspberryPi, the Potential of Bits and Bytes, Cost and Eco-Efficiency
+                                    <span class="small text-muted">by Frank Delporte</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">29</span>
+                <span class="month">May</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/300799323" target="_blank" rel="noopener">Generative AI in practice and Future-Proofing Your Software</a>
+                    
+                    
                 </div>
-                <span>
-                    Oniryx, Gembloux - Wed 29 May 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Generative AI in practice: Concrete LLM use cases in Java, with Gemini
-                                        <span class="small">by Guillaume Laforge</span>
-                                </li>
-                                <li class="ms-4">
-                                    Future-Proofing Your Software: A Deep Dive into Clean Architecture for Sustainable Software Development
-                                        <span class="small">by Maarten Vandeperre</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Oniryx, Gembloux &middot; Wednesday 29 May 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Generative AI in practice: Concrete LLM use cases in Java, with Gemini
+                                    <span class="small text-muted">by Guillaume Laforge</span>
+                            </li>
+                            <li>
+                                Future-Proofing Your Software: A Deep Dive into Clean Architecture for Sustainable Software Development
+                                    <span class="small text-muted">by Maarten Vandeperre</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">23</span>
+                <span class="month">Apr</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/300215950/" target="_blank" rel="noopener">You Can Build Web UI Using Java Only & Braving the Change</a>
+                    
+                    
                 </div>
-                <span>
-                    Haute école Léonard de Vinci, Woluwe - Tue 23 April 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    You Can Build Web UI Using Java Only
-                                        <span class="small">by Sami Ekblad</span>
-                                </li>
-                                <li class="ms-4">
-                                    Braving the Change: recalibrating to new realities
-                                        <span class="small">by Tom Cools</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Haute école Léonard de Vinci, Woluwe &middot; Tuesday 23 April 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                You Can Build Web UI Using Java Only
+                                    <span class="small text-muted">by Sami Ekblad</span>
+                            </li>
+                            <li>
+                                Braving the Change: recalibrating to new realities
+                                    <span class="small text-muted">by Tom Cools</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">19</span>
+                <span class="month">Mar</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/299479389/" target="_blank" rel="noopener">Java 22 - Treats for Everyone & Developer Productivity with Jakarta EE 11</a>
+                    
+                    
                 </div>
-                <span>
-                    Continuum Consulting NV, Hasselt - Tue 19 March 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Java 22 - Treats for Everyone!
-                                        <span class="small">by Simon Verhoeven</span>
-                                </li>
-                                <li class="ms-4">
-                                    Boost Performance and Developer Productivity with Jakarta EE 11
-                                        <span class="small">by Ivar Grimstad</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Continuum Consulting NV, Hasselt &middot; Tuesday 19 March 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Java 22 - Treats for Everyone!
+                                    <span class="small text-muted">by Simon Verhoeven</span>
+                            </li>
+                            <li>
+                                Boost Performance and Developer Productivity with Jakarta EE 11
+                                    <span class="small text-muted">by Ivar Grimstad</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">26</span>
+                <span class="month">Feb</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/298755642/" target="_blank" rel="noopener">Lille invades Kortrijk: Kestra (Event Orchestrator) + Apache Pulsar (Messaging)</a>
+                    
+                    
                 </div>
-                <span>
-                    Sweet Mustard, Kortrijk - Mon 26 February 2024
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Kestra: an OpenSource Event Driven Declarative Orchestrator written in Java
-                                        <span class="small">by Loïc Mathieu</span>
-                                </li>
-                                <li class="ms-4">
-                                    Apache Pulsar: Finally an Alternative to Kafka?
-                                        <span class="small">by Julien Jakubowski</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Sweet Mustard, Kortrijk &middot; Monday 26 February 2024
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Kestra: an OpenSource Event Driven Declarative Orchestrator written in Java
+                                    <span class="small text-muted">by Loïc Mathieu</span>
+                            </li>
+                            <li>
+                                Apache Pulsar: Finally an Alternative to Kafka?
+                                    <span class="small text-muted">by Julien Jakubowski</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">25</span>
+                <span class="month">Jan</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/298467787/" target="_blank" rel="noopener">Lightning Talk Night!</a>
+                    
+                    
                 </div>
-                <span>
-                    Faculté polytechnique de Mons - Thu 25 January 2024
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Faculté polytechnique de Mons &middot; Thursday 25 January 2024
+                </div>
+            </div>
+        </div>
+            <h2 class="archive-year h4">2023</h2>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">5</span>
+                <span class="month">Dec</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/297395858/" target="_blank" rel="noopener">Distributed Background Jobs with JobRunr & Maintenance Scheduling with Timefold</a>
+                    
+                    
                 </div>
-                <span>
-                    MeetDistrict Ghelamco Arena, Gent - Tue 5 December 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    A Java 8 Lambda and JobRunr is all you need for distributed background jobs
-                                        <span class="small">by Ronald Dehuysser</span>
-                                </li>
-                                <li class="ms-4">
-                                    Fold time and space for maintenance scheduling
-                                        <span class="small">by Geoffrey De Smet</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> MeetDistrict Ghelamco Arena, Gent &middot; Tuesday 5 December 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                A Java 8 Lambda and JobRunr is all you need for distributed background jobs
+                                    <span class="small text-muted">by Ronald Dehuysser</span>
+                            </li>
+                            <li>
+                                Fold time and space for maintenance scheduling
+                                    <span class="small text-muted">by Geoffrey De Smet</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">15</span>
+                <span class="month">Nov</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/296580070/" target="_blank" rel="noopener">Opentelemetry and continuous feedback & Your tests also need some architecting</a>
+                    
+                    
                 </div>
-                <span>
-                    Liantis, Brugge - Wed 15 November 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    OpenTelemetry and Continuous Feedback - Things you need to know about your Java code at runtime
-                                        <span class="small">by Roni Dover</span>
-                                </li>
-                                <li class="ms-4">
-                                    Your tests also need some architecting
-                                        <span class="small">by Jonas Geiregat</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Liantis, Brugge &middot; Wednesday 15 November 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                OpenTelemetry and Continuous Feedback - Things you need to know about your Java code at runtime
+                                    <span class="small text-muted">by Roni Dover</span>
+                            </li>
+                            <li>
+                                Your tests also need some architecting
+                                    <span class="small text-muted">by Jonas Geiregat</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">2</span>
+                <span class="month">Oct</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a data-toggle="tooltip" title="This event is not hosted by us, but we do promote the event." class="link-secondary" href="https://devoxx.be/" target="_blank" rel="noopener">Devoxx 2023</a>
+                    
+                    <span class="badge text-bg-secondary ms-1">Partner event</span>
                 </div>
-                <span>
-                    Antwerp - Mon 2 October 2023
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Antwerp &middot; Monday 2 October 2023
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">7</span>
+                <span class="month">Sep</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/295051128/" target="_blank" rel="noopener">Composable Architecture & Event Sourced Applications without Grey Hair</a>
+                    
+                    
                 </div>
-                <span>
-                    AE, Leuven - Thu 7 September 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    How Composable Architectures can actually solve the reasons for Microservices
-                                        <span class="small">by Edwin Derks</span>
-                                </li>
-                                <li class="ms-4">
-                                    Event Sourced Applications without Grey Hair
-                                        <span class="small">by Renato Cavalcanti</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> AE, Leuven &middot; Thursday 7 September 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                How Composable Architectures can actually solve the reasons for Microservices
+                                    <span class="small text-muted">by Edwin Derks</span>
+                            </li>
+                            <li>
+                                Event Sourced Applications without Grey Hair
+                                    <span class="small text-muted">by Renato Cavalcanti</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">7</span>
+                <span class="month">Jul</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/294251222/" target="_blank" rel="noopener">Beyond Senior Java Dev</a>
+                    
+                    
                 </div>
-                <span>
-                    Oniryx, Gembloux - Fri 7 July 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Beyond Senior Java Dev: the next steps for the technical career
-                                        <span class="small">by Bruno "Javaman" Souza</span>
-                                </li>
-                                <li class="ms-4">
-                                    Beyond Senior Java Dev: Q&A with Java Champions
-                                        <span class="small">by Bruno "Javaman" Souza, Tom Cools, Edwin Derks, Maarten Mulders</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Oniryx, Gembloux &middot; Friday 7 July 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Beyond Senior Java Dev: the next steps for the technical career
+                                    <span class="small text-muted">by Bruno "Javaman" Souza</span>
+                            </li>
+                            <li>
+                                Beyond Senior Java Dev: Q&A with Java Champions
+                                    <span class="small text-muted">by Bruno "Javaman" Souza, Tom Cools, Edwin Derks, Maarten Mulders</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">22</span>
+                <span class="month">Jun</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/293805252/" target="_blank" rel="noopener">Hybrid Cloud Applications & Cloud-Native Dev Tools</a>
+                    
+                    
                 </div>
-                <span>
-                    Red Hat, Brussel - Thu 22 June 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Hybrid Cloud Applications Built with Pure Openness
-                                        <span class="small">by Emily Jiang</span>
-                                </li>
-                                <li class="ms-4">
-                                    Cloud-Native Dev Tools: Bringing the cloud back to earth
-                                        <span class="small">by Grace Jansen</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Red Hat, Brussel &middot; Thursday 22 June 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Hybrid Cloud Applications Built with Pure Openness
+                                    <span class="small text-muted">by Emily Jiang</span>
+                            </li>
+                            <li>
+                                Cloud-Native Dev Tools: Bringing the cloud back to earth
+                                    <span class="small text-muted">by Grace Jansen</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">23</span>
+                <span class="month">May</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a data-toggle="tooltip" title="This event is not hosted by us, but we do promote the event." class="link-secondary" href="https://brussels.voxxeddays.com/" target="_blank" rel="noopener">Voxxed Days Brussels 2023</a>
+                    
+                    <span class="badge text-bg-secondary ms-1">Partner event</span>
                 </div>
-                <span>
-                    Brussels - Tue 23 May 2023
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Brussels &middot; Tuesday 23 May 2023
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">27</span>
+                <span class="month">Apr</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/292729580/" target="_blank" rel="noopener">BeJUG Speaker Training April</a>
+                    
+                    
                 </div>
-                <span>
-                    Brussel - Thu 27 April 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Speaker Training
-                                        <span class="small">by Tom Cools & Olivier Hubaut</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Brussel &middot; Thursday 27 April 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Speaker Training
+                                    <span class="small text-muted">by Tom Cools & Olivier Hubaut</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">18</span>
+                <span class="month">Apr</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/292156325/" target="_blank" rel="noopener">BeJUG April</a>
+                    
+                    
                 </div>
-                <span>
-                    Leuven - Tue 18 April 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    The next generation of Spring applications is here!
-                                        <span class="small">by Stéphane Nicoll</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Leuven &middot; Tuesday 18 April 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                The next generation of Spring applications is here!
+                                    <span class="small text-muted">by Stéphane Nicoll</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">30</span>
+                <span class="month">Mar</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/290693260/" target="_blank" rel="noopener">BeJUG March</a>
+                    
+                    
                 </div>
-                <span>
-                    Kortrijk - Thu 30 March 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    What the CRaC - Superfast JVM startup
-                                        <span class="small">by Gerrit Grunwald</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Kortrijk &middot; Thursday 30 March 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                What the CRaC - Superfast JVM startup
+                                    <span class="small text-muted">by Gerrit Grunwald</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">5</span>
+                <span class="month">Feb</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a data-toggle="tooltip" title="This event is not hosted by us, but we do promote the event." class="link-secondary" href="https://fosdem.org/2023/schedule/track/friends_of_openjdk/" target="_blank" rel="noopener">Fosdem 2023</a>
+                    
+                    <span class="badge text-bg-secondary ms-1">Partner event</span>
                 </div>
-                <span>
-                    Brussels - Sun 5 February 2023
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Brussels &middot; Sunday 5 February 2023
+                </div>
+            </div>
+        </div>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">23</span>
+                <span class="month">Jan</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/290631492/" target="_blank" rel="noopener">BeJUG January</a>
+                    
+                    
                 </div>
-                <span>
-                    Mechelen - Mon 23 January 2023
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    Quarkus 101: Intro To Java Development With Quarkus
-                                        <span class="small">by Kevin Dubois</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-            <li class="mb-2">
-                <div class="title">
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Mechelen &middot; Monday 23 January 2023
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                Quarkus 101: Intro To Java Development With Quarkus
+                                    <span class="small text-muted">by Kevin Dubois</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+            <h2 class="archive-year h4">2022</h2>
+        <div class="archive-event">
+            <div class="archive-date">
+                <span class="day">24</span>
+                <span class="month">Nov</span>
+            </div>
+            <div>
+                <div class="title fw-semibold">
                             <a class="link-primary" href="https://www.meetup.com/belgian-java-user-group/events/289451067/" target="_blank" rel="noopener">BeJUG November</a>
+                    
+                    
                 </div>
-                <span>
-                    Brussels - Thu 24 November 2022
-                        <ul class="list-unstyled">
-                                <li class="ms-4">
-                                    How Java 19 influences the future of your high-scale Java Applications
-                                        <span class="small">by Ana-Maria Mihalceanu</span>
-                                </li>
-                        </ul>
-                </span>
-            </li>
-    </ul>
+                <div class="archive-meta">
+                    <i class="fa-solid fa-location-dot"></i> Brussels &middot; Thursday 24 November 2022
+                </div>
+                    <ul class="archive-talks">
+                            <li>
+                                How Java 19 influences the future of your high-scale Java Applications
+                                    <span class="small text-muted">by Ana-Maria Mihalceanu</span>
+                            </li>
+                    </ul>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"
