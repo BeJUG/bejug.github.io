@@ -111,5 +111,7 @@ micro roastery.
 
 == Getting around
 
+=== Antwerp
+
 * https://www.velo-antwerpen.be/en[Velo^] a bicycle-sharing service, you can buy a day/week pass
 * https://www.slimnaarantwerpen.be/en/public-transport/tram-bus[Public transportation^] information on how to get around in Antwerpen using public transportation
